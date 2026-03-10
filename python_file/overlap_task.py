@@ -4,9 +4,8 @@ import torch.nn.functional as F
 
 
 class model(nn.Module):
-    def __init__(self, device, vocab_size, max_len, hidden_dim=256, embedding_dim=300) -> None:
+    def __init__(self, vocab_size, max_len=512, hidden_dim_1=256, hidden_dim_2=128, embedding_dim=300) -> None:
         super(model, self).__init__()
-
         # Embeddings for tokens, position, and segment
         self.embedding = nn.Embedding(vocab_size, embedding_dim)
         self.pos_embedding = nn.Embedding(max_len, embedding_dim)
@@ -15,25 +14,31 @@ class model(nn.Module):
         # transformer encoder layer
         self.encoder = nn.TransformerEncoderLayer(
             d_model=embedding_dim,
-            nhead=8,
+            nhead=14,
             batch_first=True,
             norm_first=True
         )
         # actual transformer block
-        self.text_encoder = nn.TransformerEncoder(self.encoder, num_layers=6)
-
-        # makes fully connected go from 300 to 256
-        self.txt_proj = nn.Linear(embedding_dim, hidden_dim)
+        self.text_encoder = nn.TransformerEncoder(self.encoder, num_layers=12)
 
         # makes it into a binary classification
         # 0 = No
         # 1 = Yes
-        self.output = nn.Linear(hidden_dim, 1)
+        self.output = nn.Sequential(
+            nn.Linear(embedding_dim, hidden_dim_1),
+            nn.LeakyReLU(),
+            nn.Dropout(p=0.1),
+            nn.Linear(hidden_dim_1, hidden_dim_2),
+            nn.LeakyReLU(),
+            nn.Linear(hidden_dim_2, 1)
+        )
 
 
     def forward(self, input_ids, segment_ids):
+        # get position
+        positions = torch.arange(input_ids.size(0), dtype=torch.long, device=input_ids.device)
         # embeddings
-        x = self.embedding(input_ids) + self.pos_embedding() + self.seg_embedding(segment_ids)
+        x = self.embedding(input_ids) + self.pos_embedding(positions) + self.seg_embedding(segment_ids)
 
         # transformer sequence
         x = self.text_encoder(x)
