@@ -4,24 +4,33 @@ import torch.nn.functional as F
 
 
 class model(nn.Module):
-    def __init__(self, device, vocab_size, hidden_dim=256, embedding_dim=300) -> None:
+    def __init__(self, device, vocab_size, max_len, hidden_dim=256, embedding_dim=300) -> None:
         super(model, self).__init__()
-        self.device = device
-        self.hidden_dim = hidden_dim
-        self.embedding_dim = embedding_dim
-        self.vocab_size = vocab_size
 
         self.embedding = nn.Embedding(vocab_size, embedding_dim)
 
-        self.encoder = nn.TransformerEncoderLayer(d_model=embedding_dim, nhead=8, batch_first=True, norm_first=True)
+        self.pos_embedding = nn.Embedding(max_len, embedding_dim)
+
+        self.seg_embedding = nn.Embedding(2, embedding_dim)
+
+        self.encoder = nn.TransformerEncoderLayer(
+            d_model=embedding_dim,
+            nhead=8,
+            batch_first=True,
+            norm_first=True
+        )
         self.text_encoder = nn.TransformerEncoder(self.encoder, num_layers=6)
 
-        self.txt_proj = nn.Linear(self.embedding_dim, self.hidden_dim)
+        self.txt_proj = nn.Linear(embedding_dim, hidden_dim)
 
         # 0 = No
         # 1 = Yes
-        self.output = nn.Linear(self.hidden_dim, 1)
+        self.output = nn.Linear(hidden_dim, 1)
 
 
-    def forward(self, input):
+    def forward(self, input_ids, segment_ids):
+        x = self.embedding(input_ids) + self.pos_embedding() + self.seg_embedding(segment_ids)
+        x = self.text_encoder(x)
+        x = self.txt_proj(x)
+        x = self.output(x[:, 0, :])
         pass
