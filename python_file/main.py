@@ -1,4 +1,5 @@
 import torch
+from overlap_task import model
 
 def main():
     # checking if there is some kind of GPU available before going to the CPU
