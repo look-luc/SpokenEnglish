@@ -43,8 +43,5 @@ class model(nn.Module):
         # transformer sequence
         x = self.text_encoder(x)
 
-        # fully connected into 256
-        x = self.txt_proj(x)
-
         # outputs to 0/1
         return self.output(x[:, 0, :])
