@@ -36,7 +36,7 @@ class model(nn.Module):
 
     def forward(self, input_ids, segment_ids):
         # get position
-        positions = torch.arange(input_ids.size(0), dtype=torch.long, device=input_ids.device)
+        positions = torch.arange(input_ids.size(1), dtype=torch.long, device=input_ids.device)
         # embeddings
         x = self.embedding(input_ids) + self.pos_embedding(positions) + self.seg_embedding(segment_ids)
 
