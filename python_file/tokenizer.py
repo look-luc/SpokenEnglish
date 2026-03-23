@@ -54,8 +54,9 @@ class NLTK_Tokenizer:
                     "[SEP]"
                 ]
             )
-
-            return tokenizer.train(corpus, trainer=trainer) # trained the tokenizer and returned
+            
+            tokenizer.train(corpus, trainer=trainer) # trained the tokenizer and returned
+            return tokenizer
 
         # seeing if the list of sentence is passed
         elif sentence_pair is not None and sentence_1 is None and sentence_2 is None:
@@ -83,7 +84,10 @@ class NLTK_Tokenizer:
                     "[SEP]"
                 ]
             )
-            return tokenizer.train(corpus, trainer=trainer) # trained the tokenizer and returned
+            
+            tokenizer.train(corpus, trainer=trainer) # trained the tokenizer and returned
+            return tokenizer
+            
         else:
             # makes sure that only a pair of sentences will be passed
             raise Exception("There has to be some kind of way to tokenize only 2 sentences")
