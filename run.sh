@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=6:00:00
-#SBATCH --output=/projects/%u/multilingual_emotion_tagging/logs/%j.log
+#SBATCH --output=/projects/%u/SpokenEnglish/logs/%j.log
 #SBATCH --job-name=spoken_english
 #SBATCH --partition=blanca-clearlab2
 #SBATCH --account=blanca-clearlab2

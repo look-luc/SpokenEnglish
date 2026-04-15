@@ -1,7 +1,5 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
-
 
 class model(nn.Module):
     def __init__(self, vocab_size, max_len=512, hidden_dim_1=256, hidden_dim_2=128, embedding_dim=300) -> None:
