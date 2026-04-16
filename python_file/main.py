@@ -9,9 +9,9 @@ from sklearn.model_selection import train_test_split
 def main():
     # checking if there is some kind of GPU available before going to the CPU
     device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
-    data = pd.read_csv("../data/OverlapProject_TRNOverlapClassifications.tsv", sep='\t')
-    tags = data["Overlap Type"]
-    x = data.drop(columns='Overlap Type', axis=1)
+    data = pd.read_json("../data/FINAL_DATA_TO_RUN/data_with_edges.json")
+    tags = data["overlap_type"]
+    x = data.drop(columns='overlap_type', axis=1)
 
     x_train, x_test, y_train, y_test = train_test_split(
         x.values,
@@ -33,21 +33,22 @@ def main():
     train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
 
-    # vocab_size = 300
-    # model_discorese = model(vocab_size).to(device)
-    #
-    # lr = 0.01
-    #
-    # optimizer = torch.optim.Adam(model_discorese.parameters(), lr=lr)
-    # criterion = nn.BCELoss()
-    # for epoch in range(10):
-    #     print(f"epoch: {epoch+1}")
-    #     for input_ids, segment_ids, target in data:
-    #         outputs = model_discorese.forward(input_ids,segment_ids)
-    #         loss = criterion(outputs, target)
-    #         optimizer.zero_grad()
-    #         loss.backward()
-    #         optimizer.step()
+    vocab_size = 300
+    model_discorese = model(vocab_size).to(device)
+
+    lr = 0.01
+    optimizer = torch.optim.Adam(model_discorese.parameters(), lr=lr)
+    criterion = nn.CrossEntropyLoss()
+
+    model.train()
+    for epoch in range(10):
+        print(f"epoch: {epoch+1}")
+        for input_ids, segment_ids, target in data:
+            outputs = model_discorese.forward(input_ids,segment_ids)
+            loss = criterion(outputs, target)
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
 
     return 0
 

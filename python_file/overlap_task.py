@@ -4,7 +4,9 @@ import torch.nn as nn
 class model(nn.Module):
     def __init__(self, vocab_size, max_len=512, hidden_dim_1=256, hidden_dim_2=128, embedding_dim=300) -> None:
         super(model, self).__init__()
-        # Embeddings for tokens, position, and segment
+
+        possible_labels = ['recognitional', 'other', 'transitional', 'progressional']
+
         self.embedding = nn.Embedding(vocab_size, embedding_dim)
         self.pos_embedding = nn.Embedding(max_len, embedding_dim)
         self.seg_embedding = nn.Embedding(2, embedding_dim)
@@ -28,7 +30,7 @@ class model(nn.Module):
             nn.Dropout(p=0.1),
             nn.Linear(hidden_dim_1, hidden_dim_2),
             nn.LeakyReLU(),
-            nn.Linear(hidden_dim_2, 1)
+            nn.Linear(hidden_dim_2, len(possible_labels))
         )
 
 
