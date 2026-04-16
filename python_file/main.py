@@ -1,5 +1,7 @@
 import torch
 import torch.nn as nn
+from sklearn.metrics import accuracy_score, f1_score
+
 from overlap_task import model
 from torch.utils.data import TensorDataset, DataLoader
 import sys
@@ -11,34 +13,14 @@ def main():
     # checking if there is some kind of GPU available before going to the CPU
     device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
     data = pd.read_json("../data/FINAL_DATA_TO_RUN/data_with_edges.json")
-    tags = data["overlap_type"]
-    x = data.drop(columns='overlap_type', axis=1)
 
-    x_train, x_test, y_train, y_test = train_test_split(
-        x.values,
-        tags.values,
-        test_size=0.2,
-        random_state=42,
-        stratify=tags.values  # Keeps class distribution consistent
-    )
-
-    x_train_tensor = torch.tensor(x_train, dtype=torch.float32).to(device)
-    y_train_tensor = torch.tensor(y_train, dtype=torch.float32).to(device)
-
-    x_test_tensor = torch.tensor(x_test, dtype=torch.float32).to(device)
-    y_test_tensor = torch.tensor(y_test, dtype=torch.float32).to(device)
-
-    train_dataset = TensorDataset(x_train_tensor, y_train_tensor)
-    test_dataset = TensorDataset(x_test_tensor, y_test_tensor)
-
-    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-    test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
+    label_map = {'recognitional': 0, 'other': 1, 'transitional': 2, 'progressional': 3}
+    labels_raw = data["overlap_type"].map(label_map).fillna(1).astype(int).values
 
     custom_tokenizer = tokenizer(vocab_size=5000)
     all_text = data['ut1_text'].tolist() + data['ut2_text'].tolist()
     custom_tokenizer.train_on_corpus(all_text)
 
-    # 2. Encode Dataset
     all_input_ids = []
     all_segment_ids = []
 
@@ -49,28 +31,77 @@ def main():
 
     input_ids_tensor = torch.tensor(all_input_ids, dtype=torch.long)
     segment_ids_tensor = torch.tensor(all_segment_ids, dtype=torch.long)
+    labels_tensor = torch.tensor(labels_raw, dtype=torch.long)
 
-    # 3. Match Model to Tokenizer Vocabulary
-    # Use the actual size of the trained vocabulary
+    indices = range(len(labels_tensor))
+    train_idx, test_idx = train_test_split(indices, test_size=0.2, random_state=42)
+
+    train_dataset = TensorDataset(
+        input_ids_tensor[train_idx],
+        segment_ids_tensor[train_idx],
+        labels_tensor[train_idx]
+    )
+    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
+
     actual_vocab_size = custom_tokenizer.tokenizer.get_vocab_size()
     model_discorese = model(vocab_size=actual_vocab_size).to(device)
 
-    vocab_size = 300
-    model_discorese = model(vocab_size).to(device)
-
-    lr = 0.01
-    optimizer = torch.optim.Adam(model_discorese.parameters(), lr=lr)
+    optimizer = torch.optim.Adam(model_discorese.parameters(), lr=0.01)
     criterion = nn.CrossEntropyLoss()
 
-    model.train()
+    model_discorese.train()
     for epoch in range(10):
-        print(f"epoch: {epoch+1}")
-        for input_ids, segment_ids, target in data:
-            outputs = model_discorese.forward(input_ids,segment_ids)
-            loss = criterion(outputs, target)
+        total_loss = 0
+        for b_input_ids, b_segment_ids, b_target in train_loader:
+            b_input_ids = b_input_ids.to(device)
+            b_segment_ids = b_segment_ids.to(device)
+            b_target = b_target.to(device)
+
             optimizer.zero_grad()
+            outputs = model_discorese(b_input_ids, b_segment_ids)
+
+            loss = criterion(outputs, b_target)
             loss.backward()
             optimizer.step()
+
+            total_loss += loss.item()
+
+        print(f"Epoch: {epoch + 1} | Loss: {total_loss / len(train_loader):.4f}")
+
+        print("\nStarting validation...")
+        model_discorese.eval()
+
+        global_true = []
+        global_pred = []
+        with torch.no_grad():
+            for b_input_ids, b_segment_ids, b_target in train_loader:
+                local_true, local_pred = [], []
+
+                b_input_ids = b_input_ids.to(device)
+                b_segment_ids = b_segment_ids.to(device)
+                b_target = b_target.to(device)
+
+                outputs = model_discorese(b_input_ids, b_segment_ids)
+                _, preds = torch.max(outputs, 1)
+
+                local_true.extend(b_target.cpu().numpy())
+                local_pred.extend(preds.cpu().numpy())
+
+                if len(local_true) > 0:
+                    acc = accuracy_score(local_true, local_pred)
+                    f1 = f1_score(local_true, local_pred, average="macro")
+
+                    print(f"Metrics: acc={acc:.3f}, f1={f1:.3f}")
+
+                    global_true.extend(local_true)
+                    global_pred.extend(local_pred)
+        if len(global_true) > 0:
+            global_acc = accuracy_score(global_true, global_pred)
+            global_f1 = f1_score(global_true, global_pred, average="macro")
+
+            print(f"\nGLOBAL: acc={global_acc:.3f}, f1={global_f1:.3f}")
+    torch.save(model_discorese.state_dict(), "multi_ling_emotion.pth")
+    print("\nModel saved as multi_ling_emotion.pth")
 
     return 0
 
