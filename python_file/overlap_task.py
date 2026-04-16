@@ -14,12 +14,12 @@ class model(nn.Module):
         # transformer encoder layer
         self.encoder = nn.TransformerEncoderLayer(
             d_model=embedding_dim,
-            nhead=15,
+            nhead=3,
             batch_first=True,
             norm_first=True
         )
         # actual transformer block
-        self.text_encoder = nn.TransformerEncoder(self.encoder, num_layers=15)
+        self.text_encoder = nn.TransformerEncoder(self.encoder, num_layers=3)
 
         self.output = nn.Sequential(
             nn.Linear(embedding_dim, hidden_dim_1),

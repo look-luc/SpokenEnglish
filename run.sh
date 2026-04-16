@@ -3,7 +3,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
-#SBATCH --time=6:00:00
+#SBATCH --time=1:00:00
 #SBATCH --output=/projects/%u/SpokenEnglish/logs/%j.log
 #SBATCH --job-name=spoken_english
 #SBATCH --partition=blanca-clearlab2

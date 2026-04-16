@@ -1,3 +1,4 @@
+import numpy as np
 import torch
 import torch.nn as nn
 from sklearn.metrics import accuracy_score, f1_score
@@ -52,8 +53,15 @@ def main():
     actual_vocab_size = custom_tokenizer.tokenizer.get_vocab_size()
     model_discorese = model(vocab_size=actual_vocab_size).to(device)
 
-    optimizer = torch.optim.Adam(model_discorese.parameters(), lr=0.01)
-    criterion = nn.CrossEntropyLoss()
+    class_counts = np.bincount(labels_raw, minlength=4)
+
+    weights = len(labels_raw) / (len(class_counts) * class_counts)
+    weights_tensor = torch.tensor(weights, dtype=torch.float32).to(device)
+
+    criterion = nn.CrossEntropyLoss(weight=weights_tensor)
+
+    lr = 1e-4
+    optimizer = torch.optim.Adam(model_discorese.parameters(), lr=lr)
 
     for epoch in range(10):
         model_discorese.train()
