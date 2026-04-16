@@ -51,7 +51,10 @@ def main():
     val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
 
     actual_vocab_size = custom_tokenizer.tokenizer.get_vocab_size()
-    model_discorese = model(vocab_size=actual_vocab_size).to(device)
+
+    pad_id = custom_tokenizer.tokenizer.token_to_id("[PAD]")
+
+    model_discorese = model(vocab_size=actual_vocab_size, pad_token_id=pad_id).to(device)
 
     class_counts = np.bincount(labels_raw, minlength=4)
 

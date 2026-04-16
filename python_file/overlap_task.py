@@ -2,23 +2,24 @@ import torch
 import torch.nn as nn
 
 class model(nn.Module):
-    def __init__(self, vocab_size, max_len=512, hidden_dim_1=256, hidden_dim_2=128, embedding_dim=300) -> None:
+    def __init__(self, vocab_size, pad_token_id=0, max_len=512, hidden_dim_1=256, hidden_dim_2=128,
+                 embedding_dim=300) -> None:
         super(model, self).__init__()
 
         possible_labels = ['recognitional', 'other', 'transitional', 'progressional']
+
+        self.pad_token_id = pad_token_id
 
         self.embedding = nn.Embedding(vocab_size, embedding_dim)
         self.pos_embedding = nn.Embedding(max_len, embedding_dim)
         self.seg_embedding = nn.Embedding(2, embedding_dim)
 
-        # transformer encoder layer
         self.encoder = nn.TransformerEncoderLayer(
             d_model=embedding_dim,
             nhead=4,
             batch_first=True,
             norm_first=True
         )
-        # actual transformer block
         self.text_encoder = nn.TransformerEncoder(self.encoder, num_layers=3)
 
         self.output = nn.Sequential(
