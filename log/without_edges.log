@@ -1,0 +1,26 @@
+
+
+
+/projects/lude4390/software/anaconda/envs/SpokenEnglish/lib/python3.10/site-packages/torch/nn/modules/transformer.py:382: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+Using device: cuda
+Epoch: 1 | Train Loss: 1.3758
+VALIDATION: acc=0.100, f1=0.088
+Epoch: 2 | Train Loss: 1.3675
+VALIDATION: acc=0.150, f1=0.156
+Epoch: 3 | Train Loss: 1.3650
+VALIDATION: acc=0.150, f1=0.142
+Epoch: 4 | Train Loss: 1.3673
+VALIDATION: acc=0.100, f1=0.053
+Epoch: 5 | Train Loss: 1.3649
+VALIDATION: acc=0.100, f1=0.050
+Epoch: 6 | Train Loss: 1.3665
+VALIDATION: acc=0.100, f1=0.050
+Epoch: 7 | Train Loss: 1.3695
+VALIDATION: acc=0.150, f1=0.156
+Epoch: 8 | Train Loss: 1.3492
+VALIDATION: acc=0.150, f1=0.142
+Epoch: 9 | Train Loss: 1.3412
+VALIDATION: acc=0.100, f1=0.087
+Epoch: 10 | Train Loss: 1.3379
+VALIDATION: acc=0.100, f1=0.087
