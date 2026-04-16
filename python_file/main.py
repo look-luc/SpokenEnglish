@@ -43,6 +43,13 @@ def main():
     )
     train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 
+    val_dataset = TensorDataset(
+        input_ids_tensor[test_idx],
+        segment_ids_tensor[test_idx],
+        labels_tensor[test_idx]
+    )
+    val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
+
     actual_vocab_size = custom_tokenizer.tokenizer.get_vocab_size()
     model_discorese = model(vocab_size=actual_vocab_size).to(device)
 
@@ -68,15 +75,14 @@ def main():
 
         print(f"Epoch: {epoch + 1} | Loss: {total_loss / len(train_loader):.4f}")
 
-        print("\nStarting validation...")
+        print("Starting validation...")
         model_discorese.eval()
 
-        global_true = []
-        global_pred = []
-        with torch.no_grad():
-            for b_input_ids, b_segment_ids, b_target in train_loader:
-                local_true, local_pred = [], []
+        all_true = []
+        all_pred = []
 
+        with torch.no_grad():
+            for b_input_ids, b_segment_ids, b_target in val_loader:
                 b_input_ids = b_input_ids.to(device)
                 b_segment_ids = b_segment_ids.to(device)
                 b_target = b_target.to(device)
@@ -84,22 +90,14 @@ def main():
                 outputs = model_discorese(b_input_ids, b_segment_ids)
                 _, preds = torch.max(outputs, 1)
 
-                local_true.extend(b_target.cpu().numpy())
-                local_pred.extend(preds.cpu().numpy())
+                all_true.extend(b_target.cpu().numpy())
+                all_pred.extend(preds.cpu().numpy())
 
-                if len(local_true) > 0:
-                    acc = accuracy_score(local_true, local_pred)
-                    f1 = f1_score(local_true, local_pred, average="macro")
+        if len(all_true) > 0:
+            val_acc = accuracy_score(all_true, all_pred)
+            val_f1 = f1_score(all_true, all_pred, average="macro")
+            print(f"VALIDATION: acc={val_acc:.3f}, f1={val_f1:.3f}")
 
-                    print(f"Metrics: acc={acc:.3f}, f1={f1:.3f}")
-
-                    global_true.extend(local_true)
-                    global_pred.extend(local_pred)
-        if len(global_true) > 0:
-            global_acc = accuracy_score(global_true, global_pred)
-            global_f1 = f1_score(global_true, global_pred, average="macro")
-
-            print(f"\nGLOBAL: acc={global_acc:.3f}, f1={global_f1:.3f}")
     torch.save(model_discorese.state_dict(), "multi_ling_emotion.pth")
     print("\nModel saved as multi_ling_emotion.pth")
 
