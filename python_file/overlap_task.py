@@ -14,16 +14,13 @@ class model(nn.Module):
         # transformer encoder layer
         self.encoder = nn.TransformerEncoderLayer(
             d_model=embedding_dim,
-            nhead=14,
+            nhead=15,
             batch_first=True,
             norm_first=True
         )
         # actual transformer block
         self.text_encoder = nn.TransformerEncoder(self.encoder, num_layers=12)
 
-        # makes it into a binary classification
-        # 0 = No
-        # 1 = Yes
         self.output = nn.Sequential(
             nn.Linear(embedding_dim, hidden_dim_1),
             nn.LeakyReLU(),
