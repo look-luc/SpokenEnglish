@@ -19,7 +19,7 @@ class model(nn.Module):
             norm_first=True
         )
         # actual transformer block
-        self.text_encoder = nn.TransformerEncoder(self.encoder, num_layers=12)
+        self.text_encoder = nn.TransformerEncoder(self.encoder, num_layers=15)
 
         self.output = nn.Sequential(
             nn.Linear(embedding_dim, hidden_dim_1),
