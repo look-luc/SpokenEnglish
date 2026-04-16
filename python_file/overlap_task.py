@@ -14,7 +14,7 @@ class model(nn.Module):
         # transformer encoder layer
         self.encoder = nn.TransformerEncoderLayer(
             d_model=embedding_dim,
-            nhead=3,
+            nhead=4,
             batch_first=True,
             norm_first=True
         )
@@ -32,13 +32,15 @@ class model(nn.Module):
 
 
     def forward(self, input_ids, segment_ids):
-        # get position
+        src_key_padding_mask = (input_ids == self.pad_token_id)
+
         positions = torch.arange(input_ids.size(1), dtype=torch.long, device=input_ids.device)
-        # embeddings
         x = self.embedding(input_ids) + self.pos_embedding(positions) + self.seg_embedding(segment_ids)
 
-        # transformer sequence
-        x = self.text_encoder(x)
+        x = self.text_encoder(x, src_key_padding_mask=src_key_padding_mask)
 
-        # outputs to 0/1
-        return self.output(x[:, 0, :])
+        mask = ~src_key_padding_mask.unsqueeze(-1)
+        x_masked = x * mask
+        pooled_output = x_masked.sum(dim=1) / mask.sum(dim=1).clamp(min=1)
+
+        return self.output(pooled_output)

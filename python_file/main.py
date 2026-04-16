@@ -60,7 +60,7 @@ def main():
 
     criterion = nn.CrossEntropyLoss(weight=weights_tensor)
 
-    lr = 1e-4
+    lr = 2e-5
     optimizer = torch.optim.Adam(model_discorese.parameters(), lr=lr)
 
     for epoch in range(10):
