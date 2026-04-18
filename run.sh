@@ -26,4 +26,10 @@ set +u && conda activate SpokenEnglish && set -u
 
 cd "$REPO_ROOT/SpokenEnglish/python_file/fine_tuned_experiment"
 
+export PYTHONUNBUFFERED=1
+
+export NCCL_P2P_DISABLE=1
+export NCCL_IB_DISABLE=1
+export FI_PROVIDER=tcp
+
 python -u main.py

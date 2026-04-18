@@ -26,6 +26,10 @@ def compute_metrics(eval_pred):
 
 
 def main():
+    print("--- SCRIPT STARTING ---", flush=True)
+    import os
+    print(f"Current Working Directory: {os.getcwd()}", flush=True)
+
     model_name = "microsoft/deberta-v3-base"
     overlap_tokenizer = tokenizer(model_name)
     model = overlap_model(model_name)
