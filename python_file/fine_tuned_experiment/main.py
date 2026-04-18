@@ -15,13 +15,15 @@ METRIC = evaluate.load("f1")
 
 
 class WeightedTrainer(Trainer):
-    def __init(self, *args, dataset=None, **kwargs):
+    def __init__(self, *args, dataset=None, **kwargs):
         super().__init__(*args, **kwargs)
+
+        if dataset is None:
+            raise ValueError("WeightedTrainer requires a 'dataset' argument to calculate weights.")
 
         y_train = [example['overlap_type'] for example in dataset['train']]
         class_names = ['recognitional', 'other', 'transitional', 'progressional', 'restatement']
 
-        # Calculate weights
         weights = compute_class_weight(
             class_weight='balanced',
             classes=class_names,
@@ -31,12 +33,11 @@ class WeightedTrainer(Trainer):
         self.weights_tensor = torch.tensor(weights, dtype=torch.float32)
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         labels = inputs.get("labels")
         outputs = model(**inputs)
         logits = outputs.get("logits")
 
-        weights = self.weights_tensor.to(device)
+        weights = self.weights_tensor.to(logits.device)
 
         loss_fct = nn.CrossEntropyLoss(weight=weights)
         loss = loss_fct(logits.view(-1, self.model.config.num_labels), labels.view(-1))
@@ -111,14 +112,14 @@ def main():
 
     os.makedirs("./overlap_output", exist_ok=True)
     trainer = WeightedTrainer(
-        dataset = dataset,
         model=model.model,
         args=training_args,
         train_dataset=tokenized_dataset["train"],
         eval_dataset=tokenized_dataset["test"],
         processing_class=overlap_tokenizer.tokenizer,
         compute_metrics=compute_metrics,
-        callbacks=[LoggingCallback()]
+        callbacks=[LoggingCallback()],
+        dataset=dataset,
     )
 
     trainer.train()
