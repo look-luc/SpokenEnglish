@@ -12,7 +12,7 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
     print(f"Using device: {device}")
 
-    data = pd.read_json("../data/FINAL_DATA_TO_RUN/data_without_edges.json")
+    data = pd.read_json("../../data/FINAL_DATA_TO_RUN/data_without_edges.json")
 
     label_map = {'recognitional': 0, 'other': 1, 'transitional': 2, 'progressional': 3}
     labels_raw = data["overlap_type"].map(label_map).fillna(1).astype(int).values
