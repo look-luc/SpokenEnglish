@@ -26,7 +26,7 @@ class WeightedTrainer(Trainer):
 
         weights = compute_class_weight(
             class_weight='balanced',
-            classes=class_names,
+            classes=np.array(class_names),
             y=y_train
         )
 
