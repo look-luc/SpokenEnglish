@@ -8,21 +8,35 @@ import evaluate
 import numpy as np
 import os
 import torch.nn as nn
-
+from sklearn.utils.class_weight import compute_class_weight
 from transformers import TrainerCallback
 
 METRIC = evaluate.load("f1")
 
 
 class WeightedTrainer(Trainer):
+    def __init(self, *args, dataset=None, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        y_train = [example['overlap_type'] for example in dataset['train']]
+        class_names = ['recognitional', 'other', 'transitional', 'progressional', 'restatement']
+
+        # Calculate weights
+        weights = compute_class_weight(
+            class_weight='balanced',
+            classes=class_names,
+            y=y_train
+        )
+
+        self.weights_tensor = torch.tensor(weights, dtype=torch.float32)
+
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
+        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         labels = inputs.get("labels")
         outputs = model(**inputs)
         logits = outputs.get("logits")
 
-        # Ensure weights are float32 and on the correct device
-        # Order: [recognitional, other, transitional, progressional, restatement]
-        weights = torch.tensor([2.0, 1.0, 1.5, 1.5, 2.0], dtype=torch.float32).to(model.device)
+        weights = self.weights_tensor.to(device)
 
         loss_fct = nn.CrossEntropyLoss(weight=weights)
         loss = loss_fct(logits.view(-1, self.model.config.num_labels), labels.view(-1))
@@ -92,11 +106,12 @@ def main():
         report_to="none",
         warmup_steps=100,
         label_smoothing_factor=0.1,
-        gradient_accumulation_steps=4.
+        gradient_accumulation_steps=4,
     )
 
     os.makedirs("./overlap_output", exist_ok=True)
     trainer = WeightedTrainer(
+        dataset = dataset,
         model=model.model,
         args=training_args,
         train_dataset=tokenized_dataset["train"],

@@ -18,7 +18,7 @@ class overlap_model():
             config=config
         )
 
-        # self._fix_layernorm_keys()
+        self._fix_layernorm_keys()
 
     def _fix_layernorm_keys(self):
         """Maps 'gamma' to 'weight' and 'beta' to 'bias' for LayerNorm stability."""
