@@ -6,10 +6,11 @@ from model import model
 from torch.utils.data import TensorDataset, DataLoader
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from tokenizer import tokenizer
+from overlap_tokenizer import tokenizer
 
 def main():
-    device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
+    device = torch.device(
+        "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
     print(f"Using device: {device}")
 
     data = pd.read_json("../../data/FINAL_DATA_TO_RUN/data_without_edges.json")
@@ -19,6 +20,7 @@ def main():
 
     custom_tokenizer = tokenizer()
     all_text = data['ut1_text'].tolist() + data['ut2_text'].tolist()
+
     custom_tokenizer.build_vocab(all_text)
 
     all_input_ids = []
@@ -50,9 +52,9 @@ def main():
     train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
 
-    actual_vocab_size = custom_tokenizer.tokenizer.get_vocab_size()
+    actual_vocab_size = custom_tokenizer.get_vocab_size()
 
-    pad_id = custom_tokenizer.tokenizer.token_to_id("[PAD]")
+    pad_id = custom_tokenizer.vocab["[PAD]"]
 
     model_discorese = model(vocab_size=actual_vocab_size, pad_token_id=pad_id).to(device)
 

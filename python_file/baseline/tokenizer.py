@@ -1,4 +1,3 @@
-# Updated tokenizer.py
 from nltk.tokenize import TreebankWordTokenizer
 from tokenizers import Tokenizer
 from tokenizers.models import BPE

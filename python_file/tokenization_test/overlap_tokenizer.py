@@ -1,5 +1,6 @@
 import spacy
 from spacy.symbols import ORTH
+import re
 
 OVERLAP_MAP = {
     r"\[\d*": "<SOV>",  # Matches [, [2, [3, etc.
@@ -18,7 +19,7 @@ class tokenizer:
         self.vocab = {"[PAD]": 0, "[UNK]": 1, "[CLS]": 2, "[SEP]": 3}
         self.special_tokens = ["<SOV>","<EOV>","<PAUSE>","<TRUNC>"]
         for token in self.special_tokens:
-            self.nlp.tokenizer.add_special_token(token, [{ORTH: token}])
+            self.nlp.tokenizer.add_special_case(token, [{ORTH: token}])
             if token not in self.vocab:
                 self.vocab[token] = len(self.vocab)
 
@@ -70,3 +71,6 @@ class tokenizer:
         if isinstance(text_input, list):
             return [self.get_tokens(t) for t in text_input]
         return self.get_tokens(text_input)
+
+    def get_vocab_size(self):
+        return len(self.vocab)

@@ -24,6 +24,6 @@ module load anaconda
 
 set +u && conda activate SpokenEnglish && set -u
 
-cd "$REPO_ROOT/SpokenEnglish/python_file"
+cd "$REPO_ROOT/SpokenEnglish/python_file/tokenization_test"
 
 python3 main.py
