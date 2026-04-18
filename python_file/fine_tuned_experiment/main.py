@@ -1,6 +1,5 @@
 import transformers
 from datasets import load_dataset
-import accelerate
 
 from overlap_tokenizer import tokenizer
 from model import overlap_model
@@ -41,10 +40,7 @@ def main():
     import os
     print(f"Current Working Directory: {os.getcwd()}", flush=True)
 
-    print(f"Transformers version: {transformers.__version__}")
-    print(f"Accelerate version: {accelerate.__version__}")
-
-    model_name = "microsoft/deberta-v3-base"
+    model_name = "YituTech/conv-bert-base"
     overlap_tokenizer = tokenizer(model_name)
     model = overlap_model(model_name)
 

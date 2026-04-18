@@ -1,12 +1,11 @@
 from transformers import AutoModelForSequenceClassification, AutoConfig
 
 class overlap_model():
-    def __init__(self, model_name="microsoft/deberta-v3-base"):
+    def __init__(self, model_name="YituTech/conv-bert-base"):
         self.labels = ['recognitional', 'other', 'transitional', 'progressional', 'restatement']
         self.id2label = {idx: label for idx, label in enumerate(self.labels)}
         self.label2id = {label: idx for idx, label in enumerate(self.labels)}
 
-        # Load config first to ensure consistency
         config = AutoConfig.from_pretrained(
             model_name,
             num_labels=len(self.labels),
@@ -19,7 +18,7 @@ class overlap_model():
             config=config
         )
 
-        self._fix_layernorm_keys()
+        # self._fix_layernorm_keys()
 
     def _fix_layernorm_keys(self):
         """Maps 'gamma' to 'weight' and 'beta' to 'bias' for LayerNorm stability."""
