@@ -15,7 +15,13 @@ def main():
 
     data = pd.read_json("../../data/FINAL_DATA_TO_RUN/data_without_edges.json")
 
-    label_map = {'recognitional': 0, 'other': 1, 'transitional': 2, 'progressional': 3}
+    label_map = {
+        'recognitional': 0,
+        'other': 1,
+        'transitional': 2,
+        'progressional': 3,
+        'restatement': 4
+    }
     labels_raw = data["overlap_type"].map(label_map).fillna(1).astype(int).values
 
     custom_tokenizer = tokenizer()
@@ -58,7 +64,7 @@ def main():
 
     model_discorese = model(vocab_size=actual_vocab_size, pad_token_id=pad_id).to(device)
 
-    class_counts = np.bincount(labels_raw, minlength=4)
+    class_counts = np.bincount(labels_raw, minlength=5)
 
     weights = len(labels_raw) / (len(class_counts) * class_counts)
     weights_tensor = torch.tensor(weights, dtype=torch.float32).to(device)
