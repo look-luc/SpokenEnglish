@@ -6,7 +6,7 @@ class model(nn.Module):
                  embedding_dim=300) -> None:
         super(model, self).__init__()
 
-        possible_labels = ['recognitional', 'other', 'transitional', 'progressional']
+        possible_labels = ['recognitional', 'other', 'transitional', 'progressional', 'restatement']
 
         self.pad_token_id = pad_token_id
 
