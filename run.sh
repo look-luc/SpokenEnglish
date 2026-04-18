@@ -24,6 +24,6 @@ module load anaconda
 
 set +u && conda activate SpokenEnglish && set -u
 
-cd "$REPO_ROOT/SpokenEnglish/python_file/baseline"
+cd "$REPO_ROOT/SpokenEnglish/python_file/fine_tuned_experiment"
 
-python3 main.py
+python -u main.py
