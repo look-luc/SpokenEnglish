@@ -49,12 +49,12 @@ def main():
         output_dir="./overlap_output",
         num_train_epochs=5,
         per_device_train_batch_size=8,
-        eval_strategy="steps",
-        eval_steps=50,
+        eval_strategy="epoch",
+        save_strategy="epoch",
         logging_strategy="steps",
         logging_steps=1,
-        save_strategy="epoch",
         load_best_model_at_end=True,
+        metric_for_best_model="f1",
         report_to="none"
     )
 
@@ -70,3 +70,7 @@ def main():
     )
 
     trainer.train()
+
+if __name__ == "__main__":
+    main()
+    print("--- SCRIPT  ENDING ---", flush=True)
