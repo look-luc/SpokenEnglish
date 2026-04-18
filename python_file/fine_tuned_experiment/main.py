@@ -1,4 +1,4 @@
-import transformers
+import torch
 from datasets import load_dataset
 
 from overlap_tokenizer import tokenizer
@@ -7,10 +7,27 @@ from transformers import TrainingArguments, Trainer
 import evaluate
 import numpy as np
 import os
+import torch.nn as nn
 
 from transformers import TrainerCallback
 
 METRIC = evaluate.load("f1")
+
+
+class WeightedTrainer(Trainer):
+    def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
+        labels = inputs.get("labels")
+        outputs = model(**inputs)
+        logits = outputs.get("logits")
+
+        # Ensure weights are float32 and on the correct device
+        # Order: [recognitional, other, transitional, progressional, restatement]
+        weights = torch.tensor([2.0, 1.0, 1.5, 1.5, 2.0], dtype=torch.float32).to(model.device)
+
+        loss_fct = nn.CrossEntropyLoss(weight=weights)
+        loss = loss_fct(logits.view(-1, self.model.config.num_labels), labels.view(-1))
+
+        return (loss, outputs) if return_outputs else loss
 
 class LoggingCallback(TrainerCallback):
     def on_log(self, args, state, control, logs=None, **kwargs):
@@ -73,10 +90,13 @@ def main():
         bf16=False,
         fp16=False,
         report_to="none",
+        warmup_steps=100,
+        label_smoothing_factor=0.1,
+        gradient_accumulation_steps=4.
     )
 
     os.makedirs("./overlap_output", exist_ok=True)
-    trainer = Trainer(
+    trainer = WeightedTrainer(
         model=model.model,
         args=training_args,
         train_dataset=tokenized_dataset["train"],

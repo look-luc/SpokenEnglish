@@ -12,9 +12,9 @@ class tokenizer():
         tokenized = self.tokenizer(
             examples["ut1_text"],
             examples["ut2_text"],
-            padding="max_length",
             truncation=True,
-            max_length=512
+            max_length=512,
+            padding=True,
         )
 
         tokenized["labels"] = [label2id[overlap] for overlap in examples["overlap_type"]]
