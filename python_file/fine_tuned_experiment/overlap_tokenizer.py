@@ -14,7 +14,7 @@ class tokenizer():
             examples["ut2_text"],
             padding="max_length",
             truncation=True,
-            max_length=128
+            max_length=512
         )
 
         tokenized["labels"] = [label2id[overlap] for overlap in examples["overlap_type"]]

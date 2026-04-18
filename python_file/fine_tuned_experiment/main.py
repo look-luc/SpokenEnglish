@@ -1,4 +1,7 @@
+import transformers
 from datasets import load_dataset
+from transformers.integrations import accelerate
+
 from overlap_tokenizer import tokenizer
 from model import overlap_model
 from transformers import TrainingArguments, Trainer
@@ -19,10 +22,18 @@ class LoggingCallback(TrainerCallback):
                 f.flush()
                 os.fsync(f.fileno())
 
+
 def compute_metrics(eval_pred):
     logits, labels = eval_pred
     predictions = np.argmax(logits, axis=-1)
-    return METRIC.compute(predictions=predictions, references=labels, average="macro")
+
+    f1 = METRIC.compute(predictions=predictions, references=labels, average="macro")["f1"]
+    acc = evaluate.load("accuracy").compute(predictions=predictions, references=labels)["accuracy"]
+
+    return {
+        "f1": f1,
+        "accuracy": acc
+    }
 
 
 def main():
@@ -30,6 +41,8 @@ def main():
     import os
     print(f"Current Working Directory: {os.getcwd()}", flush=True)
 
+    print(transformers.__version__)
+    print(accelerate.__version__)
     model_name = "microsoft/deberta-v3-base"
     overlap_tokenizer = tokenizer(model_name)
     model = overlap_model(model_name)
@@ -47,15 +60,22 @@ def main():
 
     training_args = TrainingArguments(
         output_dir="./overlap_output",
-        num_train_epochs=5,
+        num_train_epochs=10,
         per_device_train_batch_size=8,
         eval_strategy="epoch",
         save_strategy="epoch",
-        logging_strategy="steps",
-        logging_steps=1,
+        logging_steps=5,
+        learning_rate=2e-6,
+        lr_scheduler_type="linear",
+        warmup_ratio=0.15,
+        weight_decay=0.01,
+        max_grad_norm=0.5,
         load_best_model_at_end=True,
         metric_for_best_model="f1",
-        report_to="none"
+        bf16=False,
+        fp16=False,
+        report_to="none",
+        warmup_steps=10,
     )
 
     os.makedirs("./overlap_output", exist_ok=True)
@@ -70,6 +90,12 @@ def main():
     )
 
     trainer.train()
+
+    print("\n--- FINAL EVALUATION ---")
+    final_metrics = trainer.evaluate()
+
+    print(f"Overall F1 Score: {final_metrics.get('eval_f1'):.4f}")
+    print(f"Overall Accuracy: {final_metrics.get('eval_accuracy'):.4f}")
 
 if __name__ == "__main__":
     main()
