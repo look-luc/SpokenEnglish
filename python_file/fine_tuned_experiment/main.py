@@ -22,15 +22,21 @@ class WeightedTrainer(Trainer):
             raise ValueError("WeightedTrainer requires a 'dataset' argument to calculate weights.")
 
         y_train = [example['overlap_type'] for example in dataset['train']]
-        class_names = ['recognitional', 'other', 'transitional', 'progressional', 'restatement']
+        full_class_names = ['recognitional', 'other', 'transitional', 'progressional', 'restatement']
 
-        weights = compute_class_weight(
+        present_classes = np.unique(y_train)
+
+        calculated_weights = compute_class_weight(
             class_weight='balanced',
-            classes=np.array(class_names),
+            classes=present_classes,
             y=y_train
         )
 
-        self.weights_tensor = torch.tensor(weights, dtype=torch.float32)
+        weight_dict = {cls: weight for cls, weight in zip(present_classes, calculated_weights)}
+        final_weights = [weight_dict.get(cls, 1.0) for cls in full_class_names]
+
+        self.weights_tensor = torch.tensor(final_weights, dtype=torch.float32)
+        print(f"Calculated class weights: {dict(zip(full_class_names, final_weights))}")
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         labels = inputs.get("labels")
