@@ -1,6 +1,6 @@
 import transformers
 from datasets import load_dataset
-from transformers.integrations import accelerate
+import accelerate
 
 from overlap_tokenizer import tokenizer
 from model import overlap_model
@@ -41,8 +41,9 @@ def main():
     import os
     print(f"Current Working Directory: {os.getcwd()}", flush=True)
 
-    print(transformers.__version__)
-    print(accelerate.__version__)
+    print(f"Transformers version: {transformers.__version__}")
+    print(f"Accelerate version: {accelerate.__version__}")
+
     model_name = "microsoft/deberta-v3-base"
     overlap_tokenizer = tokenizer(model_name)
     model = overlap_model(model_name)
@@ -58,6 +59,7 @@ def main():
         batched=True
     )
 
+    # In main.py
     training_args = TrainingArguments(
         output_dir="./overlap_output",
         num_train_epochs=10,
@@ -65,17 +67,16 @@ def main():
         eval_strategy="epoch",
         save_strategy="epoch",
         logging_steps=5,
-        learning_rate=2e-6,
+        learning_rate=1e-5,
         lr_scheduler_type="linear",
         warmup_ratio=0.15,
         weight_decay=0.01,
-        max_grad_norm=0.5,
+        max_grad_norm=1.0,
         load_best_model_at_end=True,
         metric_for_best_model="f1",
         bf16=False,
         fp16=False,
         report_to="none",
-        warmup_steps=10,
     )
 
     os.makedirs("./overlap_output", exist_ok=True)
