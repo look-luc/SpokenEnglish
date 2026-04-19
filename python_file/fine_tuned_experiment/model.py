@@ -1,6 +1,35 @@
 import torch
 from huggingface_hub import hf_hub_download
 from transformers import AutoModelForSequenceClassification, AutoConfig
+import torch.nn as nn
+import torch.nn.functional as F
+
+
+class FocalLoss(nn.Module):
+    def __init__(self, alpha=None, gamma=2.0, reduction='mean'):
+        """
+        :param alpha: Prior weights for each class (similar to CrossEntropy weights).
+        :param gamma: The focusing parameter. Higher values reduce loss for easy examples more.
+        :param reduction: 'mean', 'sum', or 'none'.
+        """
+        super(FocalLoss, self).__init__()
+        self.alpha = alpha
+        self.gamma = gamma
+        self.reduction = reduction
+
+    def forward(self, inputs, targets):
+        ce_loss = F.cross_entropy(inputs, targets, reduction='none', weight=self.alpha)
+
+        pt = torch.exp(-ce_loss)
+
+        focal_loss = ((1 - pt) ** self.gamma) * ce_loss
+
+        if self.reduction == 'mean':
+            return focal_loss.mean()
+        elif self.reduction == 'sum':
+            return focal_loss.sum()
+        else:
+            return focal_loss
 
 class overlap_model():
     def __init__(self, model_name="YituTech/conv-bert-base"):

@@ -1,13 +1,13 @@
 import torch
 from datasets import load_dataset
-
+from sklearn.metrics import confusion_matrix
 from overlap_tokenizer import tokenizer
 from model import overlap_model
 from transformers import TrainingArguments, Trainer
 import evaluate
 import numpy as np
 import os
-import torch.nn as nn
+from model import FocalLoss
 from sklearn.utils.class_weight import compute_class_weight
 from transformers import TrainerCallback
 
@@ -36,6 +36,13 @@ class WeightedTrainer(Trainer):
         final_weights = [weight_dict.get(cls, 1.0) for cls in full_class_names]
 
         self.weights_tensor = torch.tensor(final_weights, dtype=torch.float32)
+        alpha = [weight_dict.get(cls, 1.0) for cls in full_class_names]
+
+        self.focal_loss_fct = FocalLoss(
+            alpha=torch.tensor(alpha, dtype=torch.float32),
+            gamma=2.0
+        )
+
         print(f"Calculated class weights: {dict(zip(full_class_names, final_weights))}")
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
@@ -43,10 +50,12 @@ class WeightedTrainer(Trainer):
         outputs = model(**inputs)
         logits = outputs.get("logits")
 
-        weights = self.weights_tensor.to(logits.device)
+        self.focal_loss_fct.alpha = self.focal_loss_fct.alpha.to(logits.device)
 
-        loss_fct = nn.CrossEntropyLoss(weight=weights)
-        loss = loss_fct(logits.view(-1, self.model.config.num_labels), labels.view(-1))
+        loss = self.focal_loss_fct(
+            logits.view(-1, self.model.config.num_labels),
+            labels.view(-1)
+        )
 
         return (loss, outputs) if return_outputs else loss
 
@@ -64,13 +73,16 @@ def compute_metrics(eval_pred):
     logits, labels = eval_pred
     predictions = np.argmax(logits, axis=-1)
 
+    unique_preds = np.unique(predictions)
+    print(f"Unique classes predicted: {unique_preds}")
+
+    cm = confusion_matrix(labels, predictions)
+    print("Confusion Matrix:\n", cm)
+
     f1 = METRIC.compute(predictions=predictions, references=labels, average="macro")["f1"]
     acc = evaluate.load("accuracy").compute(predictions=predictions, references=labels)["accuracy"]
 
-    return {
-        "f1": f1,
-        "accuracy": acc
-    }
+    return {"f1": f1, "accuracy": acc}
 
 
 def main():
@@ -111,9 +123,9 @@ def main():
         bf16=False,
         fp16=False,
         report_to="none",
-        warmup_steps=100,
+        warmup_steps=10,
         label_smoothing_factor=0.1,
-        gradient_accumulation_steps=4,
+        gradient_accumulation_steps=1,
     )
 
     os.makedirs("./overlap_output", exist_ok=True)
