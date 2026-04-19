@@ -1,0 +1,25 @@
+/projects/lude4390/software/anaconda/envs/SpokenEnglish/lib/python3.10/site-packages/torch/nn/modules/transformer.py:382: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/projects/lude4390/SpokenEnglish/python_file/tokenization_test/main.py:69: RuntimeWarning: divide by zero encountered in divide
+  weights = len(labels_raw) / (len(class_counts) * class_counts)
+Using device: cuda
+Epoch: 1 | Train Loss: 1.5875
+VALIDATION: acc=0.100, f1=0.059
+Epoch: 2 | Train Loss: 1.5598
+VALIDATION: acc=0.100, f1=0.079
+Epoch: 3 | Train Loss: 1.5332
+VALIDATION: acc=0.050, f1=0.025
+Epoch: 4 | Train Loss: 1.5153
+VALIDATION: acc=0.050, f1=0.026
+Epoch: 5 | Train Loss: 1.5121
+VALIDATION: acc=0.050, f1=0.026
+Epoch: 6 | Train Loss: 1.5041
+VALIDATION: acc=0.050, f1=0.026
+Epoch: 7 | Train Loss: 1.4872
+VALIDATION: acc=0.050, f1=0.033
+Epoch: 8 | Train Loss: 1.4670
+VALIDATION: acc=0.050, f1=0.050
+Epoch: 9 | Train Loss: 1.4635
+VALIDATION: acc=0.000, f1=0.000
+Epoch: 10 | Train Loss: 1.4604
+VALIDATION: acc=0.050, f1=0.026
