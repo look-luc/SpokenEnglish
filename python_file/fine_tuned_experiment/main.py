@@ -96,7 +96,7 @@ def main():
 
     model.resize_embeddings(len(overlap_tokenizer.tokenizer))
 
-    dataset = load_dataset('json', data_files={'train': "../../data/FINAL_DATA_TO_RUN/data_with_edges.json"})
+    dataset = load_dataset('json', data_files={'train': "../../data/FINAL_DATA_TO_RUN/data_without_edges.json"})
 
     split_dataset = dataset["train"].train_test_split(test_size=0.2)
 
@@ -108,12 +108,12 @@ def main():
     # In main.py
     training_args = TrainingArguments(
         output_dir="./overlap_output",
-        num_train_epochs=10,
+        num_train_epochs=50,
         per_device_train_batch_size=8,
         eval_strategy="epoch",
         save_strategy="epoch",
         logging_steps=5,
-        learning_rate=1e-5,
+        learning_rate=3e-5,
         lr_scheduler_type="linear",
         warmup_ratio=0.15,
         weight_decay=0.01,
@@ -123,7 +123,7 @@ def main():
         bf16=False,
         fp16=False,
         report_to="none",
-        warmup_steps=10,
+        warmup_steps=5,
         label_smoothing_factor=0.1,
         gradient_accumulation_steps=1,
     )
