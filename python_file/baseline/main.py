@@ -71,15 +71,14 @@ def main():
 
     lr = 2e-5
     optimizer = torch.optim.AdamW(model_discorese.parameters(), lr=lr)
-    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=3, gamma=0.1)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=2)
 
     best_f1 = 0.0
-    for epoch in range(10):
+    for epoch in range(15):
         model_discorese.train()
         total_train_loss = 0
         for b_input_ids, b_segment_ids, b_target in train_loader:
             b_input_ids, b_segment_ids, b_target = b_input_ids.to(device), b_segment_ids.to(device), b_target.to(device)
-
             optimizer.zero_grad()
             outputs = model_discorese(b_input_ids, b_segment_ids)
             loss = criterion(outputs, b_target)
@@ -87,32 +86,30 @@ def main():
             optimizer.step()
             total_train_loss += loss.item()
 
-        if val_f1 > best_f1:
-            best_f1 = val_f1
-            torch.save(model_discorese.state_dict(), "best_emotion_model.pth")
-            print(f"--- New Best Model Saved (F1: {val_f1:.3f}) ---")
-
-        scheduler.step()
-
-        print(f"Epoch: {epoch + 1} | Train Loss: {total_train_loss / len(train_loader):.4f}")
-
-        # Validation
         model_discorese.eval()
         all_true, all_pred = [], []
         with torch.no_grad():
             for b_input_ids, b_segment_ids, b_target in val_loader:
-                b_input_ids, b_segment_ids, b_target = b_input_ids.to(device), b_segment_ids.to(device), b_target.to(device)
+                b_input_ids, b_segment_ids, b_target = b_input_ids.to(device), b_segment_ids.to(device), b_target.to(
+                    device)
                 outputs = model_discorese(b_input_ids, b_segment_ids)
                 _, preds = torch.max(outputs, 1)
                 all_true.extend(b_target.cpu().numpy())
                 all_pred.extend(preds.cpu().numpy())
 
-        if len(all_true) > 0:
-            val_acc = accuracy_score(all_true, all_pred)
-            val_f1 = f1_score(all_true, all_pred, average="macro")
-            print(f"VALIDATION: acc={val_acc:.3f}, f1={val_f1:.3f}")
+        val_f1 = f1_score(all_true, all_pred, average="macro") if all_true else 0
+        val_acc = accuracy_score(all_true, all_pred) if all_true else 0
 
-    torch.save(model_discorese.state_dict(), "multi_ling_emotion.pth")
+        print(f"Epoch {epoch + 1} | Loss: {total_train_loss / len(train_loader):.4f} | Val F1: {val_f1:.3f}")
+
+        if val_f1 > best_f1:
+            best_f1 = val_f1
+            torch.save(model_discorese.state_dict(), "best_model.pth")
+            print(f"--- New Best F1: {val_f1:.3f} (Saved) ---")
+            print(f"Accuracy: {val_acc:.3f} (Saved) ---")
+
+        scheduler.step(val_f1)
+
     return 0
 
 if __name__ == "__main__":
