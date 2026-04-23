@@ -70,8 +70,10 @@ def main():
     criterion = nn.CrossEntropyLoss(weight=weights_tensor)
 
     lr = 2e-5
-    optimizer = torch.optim.Adam(model_discorese.parameters(), lr=lr)
+    optimizer = torch.optim.AdamW(model_discorese.parameters(), lr=lr)
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=3, gamma=0.1)
 
+    best_f1 = 0.0
     for epoch in range(10):
         model_discorese.train()
         total_train_loss = 0
@@ -84,6 +86,13 @@ def main():
             loss.backward()
             optimizer.step()
             total_train_loss += loss.item()
+
+        if val_f1 > best_f1:
+            best_f1 = val_f1
+            torch.save(model_discorese.state_dict(), "best_emotion_model.pth")
+            print(f"--- New Best Model Saved (F1: {val_f1:.3f}) ---")
+
+        scheduler.step()
 
         print(f"Epoch: {epoch + 1} | Train Loss: {total_train_loss / len(train_loader):.4f}")
 

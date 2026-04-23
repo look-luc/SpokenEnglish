@@ -40,8 +40,7 @@ class model(nn.Module):
 
         x = self.text_encoder(x, src_key_padding_mask=src_key_padding_mask)
 
-        mask = ~src_key_padding_mask.unsqueeze(-1)
-        x_masked = x * mask
-        pooled_output = x_masked.sum(dim=1) / mask.sum(dim=1).clamp(min=1)
+        cls_output = x[:, 0, :]
+        cls_output = self.pre_classifier_norm(cls_output)
 
-        return self.output(pooled_output)
+        return self.output(cls_output)

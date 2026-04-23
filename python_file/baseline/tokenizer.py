@@ -6,11 +6,11 @@ from tokenizers.processors import BertProcessing
 import re
 
 OVERLAP_MAP = {
-    r"\[\d*": "<SOV>",  # Matches [, [2, [3, etc.
-    r"\]\d*": "<EOV>",  # Matches ], ]2, ]3, etc.
-    r"\.\.": "<PAUSE>", # Standard SBC pause marker
-    r"--": "<TRUNC>",    # Truncated speech marker
-    r'\(H.*\)=?': "<BREATH>",
+    r"\[\d*": "<SOV>",
+    r"\]\d*": "<EOV>",
+    r"\.\.": "<PAUSE>",
+    r"--": "<TRUNC>",
+    r'\[?\(H\)=?\]?': "<BREATH>", # Updated consolidated regex
     r'\(.*\)': "<SOUND>",
     r'\(\(.*\)\)': "<NOISE>",
     r'\<.*': "<START_OTHER>",
@@ -24,48 +24,28 @@ class tokenizer:
         self.tokenizer = Tokenizer(BPE(unk_token="[UNK]"))
 
     def train_on_corpus(self, texts):
-        trainer = BpeTrainer(
-            vocab_size=self.vocab_size,
-            special_tokens=[
-                "[PAD]",
-                "[UNK]",
-                "[CLS]",
-                "[SEP]",
-                "<SOV>",
-                "<EOV>",
-                "<PAUSE>",
-                "<TRUNC>",
-                "<BREATH>",
-                "<SOUND>",
-                "<NOISE>",
-                "<START_OTHER>",
-                "<END_OTHER>"
-            ]
-        )
-        # NLTK pre-tokenization can be used here to clean the corpus
-        preprocess_text = ""
-        for pattern, replacement in OVERLAP_MAP.items():
-            text = re.sub(pattern, replacement, texts)
-            preprocess_text += " ".join(text.split())
-        corpus = [" ".join(self.nltk_tokenizer.tokenize(t)) for t in preprocess_text]
-        self.tokenizer.train_from_iterator(corpus, trainer=trainer)
+        trainer = BpeTrainer(vocab_size=self.vocab_size,
+                             special_tokens=["[PAD]", "[UNK]", "[CLS]", "[SEP]"] + list(OVERLAP_MAP.values()))
 
-        # Configure the tokenizer to add [CLS] and [SEP] automatically like BERT
+        processed_texts = []
+        for text in texts:
+            temp_text = text
+            for pattern, replacement in OVERLAP_MAP.items():
+                temp_text = re.sub(pattern, replacement, temp_text)
+            processed_texts.append(" ".join(self.nltk_tokenizer.tokenize(temp_text)))
+
+        self.tokenizer.train_from_iterator(processed_texts, trainer=trainer)
+
+        cls_id = self.tokenizer.token_to_id("[CLS]")
+        sep_id = self.tokenizer.token_to_id("[SEP]")
         self.tokenizer.post_processor = BertProcessing(
-            ("[SEP]", self.tokenizer.token_to_id("[SEP]")),
-            ("[CLS]", self.tokenizer.token_to_id("[CLS]")),
+            ("[SEP]", sep_id),
+            ("[CLS]", cls_id),
         )
 
     def encode(self, text1, text2, max_length=512):
-        """Encodes a pair of sentences into input_ids and segment_ids."""
+        self.tokenizer.enable_padding(pad_id=self.tokenizer.token_to_id("[PAD]"), length=max_length)
+        self.tokenizer.enable_truncation(max_length=max_length)
+
         encoding = self.tokenizer.encode(text1, text2)
-
-        # Truncate and pad manually to match max_length
-        ids = encoding.ids[:max_length]
-        type_ids = encoding.type_ids[:max_length]
-
-        padding_len = max_length - len(ids)
-        ids += [self.tokenizer.token_to_id("[PAD]")] * padding_len
-        type_ids += [0] * padding_len  # Simplified segment IDs
-
-        return ids, type_ids
+        return encoding.ids, encoding.type_ids
