@@ -3,6 +3,19 @@ from tokenizers import Tokenizer
 from tokenizers.models import BPE
 from tokenizers.trainers import BpeTrainer
 from tokenizers.processors import BertProcessing
+import re
+
+OVERLAP_MAP = {
+    r"\[\d*": "<SOV>",  # Matches [, [2, [3, etc.
+    r"\]\d*": "<EOV>",  # Matches ], ]2, ]3, etc.
+    r"\.\.": "<PAUSE>", # Standard SBC pause marker
+    r"--": "<TRUNC>",    # Truncated speech marker
+    r'\(H.*\)=?': "<BREATH>",
+    r'\(.*\)': "<SOUND>",
+    r'\(\(.*\)\)': "<NOISE>",
+    r'\<.*': "<START_OTHER>",
+    r'.*\>': "<END_OTHER>",
+}
 
 class tokenizer:
     def __init__(self, vocab_size=10000):
@@ -13,10 +26,28 @@ class tokenizer:
     def train_on_corpus(self, texts):
         trainer = BpeTrainer(
             vocab_size=self.vocab_size,
-            special_tokens=["[PAD]", "[UNK]", "[CLS]", "[SEP]"]
+            special_tokens=[
+                "[PAD]",
+                "[UNK]",
+                "[CLS]",
+                "[SEP]",
+                "<SOV>",
+                "<EOV>",
+                "<PAUSE>",
+                "<TRUNC>",
+                "<BREATH>",
+                "<SOUND>",
+                "<NOISE>",
+                "<START_OTHER>",
+                "<END_OTHER>"
+            ]
         )
         # NLTK pre-tokenization can be used here to clean the corpus
-        corpus = [" ".join(self.nltk_tokenizer.tokenize(t)) for t in texts]
+        preprocess_text = ""
+        for pattern, replacement in OVERLAP_MAP.items():
+            text = re.sub(pattern, replacement, texts)
+            preprocess_text += " ".join(text.split())
+        corpus = [" ".join(self.nltk_tokenizer.tokenize(t)) for t in preprocess_text]
         self.tokenizer.train_from_iterator(corpus, trainer=trainer)
 
         # Configure the tokenizer to add [CLS] and [SEP] automatically like BERT

@@ -32,7 +32,6 @@ class tokenizer:
                     self.vocab[t] = len(self.vocab)
 
     def preprocess(self, text):
-        # FIX 2: Use re.sub to actually process the regex patterns
         for pattern, replacement in OVERLAP_MAP.items():
             text = re.sub(pattern, replacement, text)
         return " ".join(text.split())
