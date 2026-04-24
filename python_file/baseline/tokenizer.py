@@ -6,15 +6,15 @@ from tokenizers.processors import BertProcessing
 import re
 
 OVERLAP_MAP = {
-    r"\[\d*": "<SOV>",
-    r"\]\d*": "<EOV>",
+    r'\(\(.*?\)\)': "<NOISE>",   # Check for double parens first
+    r'\(H\)=?': "<BREATH>",
+    r'\(.*?\)': "<SOUND>",      # Then single parens
+    r"\[\d+": "<SOV>",
+    r"\d+\]": "<EOV>",
     r"\.\.": "<PAUSE>",
     r"--": "<TRUNC>",
-    r'\[?\(H\)=?\]?': "<BREATH>", # Updated consolidated regex
-    r'\(.*\)': "<SOUND>",
-    r'\(\(.*\)\)': "<NOISE>",
-    r'\<.*': "<START_OTHER>",
-    r'.*\>': "<END_OTHER>",
+    r'\<': "<START_OTHER>",
+    r'\>': "<END_OTHER>",
 }
 
 class tokenizer:
