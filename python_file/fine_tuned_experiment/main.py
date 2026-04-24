@@ -18,11 +18,7 @@ class WeightedTrainer(Trainer):
     def __init__(self, *args, dataset=None, **kwargs):
         super().__init__(*args, **kwargs)
 
-        if dataset is None:
-            raise ValueError("WeightedTrainer requires a 'dataset' argument to calculate weights.")
-
         y_train = [example['overlap_type'] for example in dataset['train']]
-        full_class_names = ['recognitional', 'other', 'transitional', 'progressional', 'restatement']
 
         present_classes = np.unique(y_train)
 
@@ -33,17 +29,12 @@ class WeightedTrainer(Trainer):
         )
 
         weight_dict = {cls: weight for cls, weight in zip(present_classes, calculated_weights)}
-        final_weights = [weight_dict.get(cls, 1.0) for cls in full_class_names]
 
-        self.weights_tensor = torch.tensor(final_weights, dtype=torch.float32)
-        alpha = [weight_dict.get(cls, 1.0) for cls in full_class_names]
+        # Map weights to the internal IDs the model uses (from model.label2id)
+        final_weights = [weight_dict.get(self.model.config.id2label[i], 1.0)
+                         for i in range(self.model.config.num_labels)]
 
-        self.focal_loss_fct = FocalLoss(
-            alpha=torch.tensor(alpha, dtype=torch.float32),
-            gamma=2.0
-        )
-
-        print(f"Calculated class weights: {dict(zip(full_class_names, final_weights))}")
+        self.weights_tensor = torch.tensor(final_weights, dtype=torch.float32).to(self.model.device)
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         labels = inputs.get("labels")
@@ -94,7 +85,7 @@ def main():
     overlap_tokenizer = tokenizer(model_name)
     model = overlap_model(model_name)
 
-    model.resize_embeddings(len(overlap_tokenizer.tokenizer))
+    model.model.resize_embeddings(len(overlap_tokenizer.tokenizer))
 
     dataset = load_dataset('json', data_files={'train': "../../data/FINAL_DATA_TO_RUN/data_without_edges.json"})
 
