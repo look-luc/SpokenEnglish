@@ -36,12 +36,15 @@ class WeightedTrainer(Trainer):
 
         self.weights_tensor = torch.tensor(final_weights, dtype=torch.float32).to(self.model.device)
 
+        self.focal_loss_fct = FocalLoss(alpha=self.weights_tensor, gamma=2.0)
+
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         labels = inputs.get("labels")
         outputs = model(**inputs)
         logits = outputs.get("logits")
 
-        self.focal_loss_fct.alpha = self.focal_loss_fct.alpha.to(logits.device)
+        if self.focal_loss_fct.alpha is not None:
+            self.focal_loss_fct.alpha = self.focal_loss_fct.alpha.to(logits.device)
 
         loss = self.focal_loss_fct(
             logits.view(-1, self.model.config.num_labels),
@@ -89,7 +92,7 @@ def main():
 
     dataset = load_dataset('json', data_files={'train': "../../data/FINAL_DATA_TO_RUN/data_without_edges.json"})
 
-    split_dataset = dataset["train"].train_test_split(test_size=0.2)
+    split_dataset = dataset["train"].train_test_split(test_size=0.1)
 
     tokenized_dataset = split_dataset.map(
         lambda x: overlap_tokenizer.tokenize_function(x, model.label2id),
@@ -99,24 +102,20 @@ def main():
     # In main.py
     training_args = TrainingArguments(
         output_dir="./overlap_output",
-        num_train_epochs=50,
+        num_train_epochs=12,
         per_device_train_batch_size=8,
         eval_strategy="epoch",
         save_strategy="epoch",
         logging_steps=5,
-        learning_rate=3e-5,
+        learning_rate=2e-5,
         lr_scheduler_type="linear",
-        warmup_ratio=0.15,
+        warmup_ratio=0.1,
         weight_decay=0.01,
-        max_grad_norm=1.0,
         load_best_model_at_end=True,
         metric_for_best_model="f1",
-        bf16=False,
-        fp16=False,
+        label_smoothing_factor=0.0,
+        fp16=True,
         report_to="none",
-        warmup_steps=5,
-        label_smoothing_factor=0.1,
-        gradient_accumulation_steps=1,
     )
 
     os.makedirs("./overlap_output", exist_ok=True)

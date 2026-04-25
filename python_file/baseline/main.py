@@ -44,7 +44,7 @@ def main():
     indices = range(len(labels_tensor))
     train_idx, dev_idx = train_test_split(
         np.arange(len(input_ids_tensor)),
-        test_size=0.2,
+        test_size=0.1,
         random_state=42,
         stratify=labels_raw  # Ensure classes are balanced
     )
