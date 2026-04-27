@@ -30,7 +30,9 @@ def tsv_to_json(tsv_filepath, json_filepath, include_edges=True):
                 "time_mark_ut1": row["TimeMark Ut_1"],
                 "time_mark_ut2": row["TimeMark Ut_2"],
                 "ut1_text": row["Ut_1"],
+                "ut1_index": int(row["Index_1"]),
                 "ut2_text": row["Ut_2"],
+                "ut2_index": int(row["Index_2"]),
                 "overlap_type": row["Overlap Type"]
             }
             
