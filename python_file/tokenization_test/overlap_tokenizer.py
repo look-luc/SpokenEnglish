@@ -10,8 +10,6 @@ OVERLAP_MAP = {
     r"\d+\]": "<EOV>",
     r"\.\.": "<PAUSE>",
     r"--": "<TRUNC>",
-    r'\<': "<START_OTHER>",
-    r'\>': "<END_OTHER>",
 }
 
 

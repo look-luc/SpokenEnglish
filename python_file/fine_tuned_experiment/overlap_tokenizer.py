@@ -12,8 +12,6 @@ OVERLAP_MAP = {
     r"\]": "<EOV>",
     r"\.\.": "<PAUSE>",
     r"--": "<TRUNC>",
-    r'\<': "<START_OTHER>",
-    r'\>': "<END_OTHER>",
 }
 
 class tokenizer():
