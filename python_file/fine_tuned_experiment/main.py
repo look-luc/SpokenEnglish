@@ -99,7 +99,7 @@ def main():
     overlap_tokenizer = tokenizer(model_name)
     model = overlap_model(model_name)
 
-    model.model.resize_embeddings(len(overlap_tokenizer.tokenizer))
+    model.resize_embeddings(len(overlap_tokenizer.tokenizer))
 
     dataset = load_dataset('json', data_files={'train': "../../data/FINAL_DATA_TO_RUN/data_without_edges.json"})
 

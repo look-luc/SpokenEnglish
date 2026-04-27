@@ -42,5 +42,8 @@ class tokenizer():
             padding=True,
         )
 
-        tokenized["labels"] = [label2id[overlap] for overlap in examples["overlap_type"]]
+        tokenized["labels"] = [
+            label2id.get(overlap if overlap != "trasitional" else "transitional")
+            for overlap in examples["overlap_type"]
+        ]
         return tokenized
