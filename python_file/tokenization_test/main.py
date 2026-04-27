@@ -100,7 +100,7 @@ def main():
 
         # --- VALIDATION PHASE ---
         model_discorese.eval()
-        dev_f1 = 0
+        best_dev_f1 = 0
         val_loss = 0
         all_true, all_pred = [], []
 
@@ -124,8 +124,8 @@ def main():
         print(
             f"Epoch {epoch + 1}: Train Loss: {avg_train_loss:.4f} | Val Loss: {avg_val_loss:.4f} | Val F1: {val_f1:.3f}")
 
-        if dev_f1 > best_dev_f1:
-            best_dev_f1 = dev_f1
+        if val_f1 > best_dev_f1:
+            best_dev_f1 = val_f1
             torch.save(model_discorese.state_dict(), "best_model.pt")
         scheduler.step(val_f1)
     return 0
