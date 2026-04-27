@@ -1,0 +1,23 @@
+Using device: cuda
+
+
+
+/projects/lude4390/software/anaconda/envs/SpokenEnglish/lib/python3.10/site-packages/torch/nn/modules/transformer.py:382: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/projects/lude4390/SpokenEnglish/python_file/baseline/main.py:73: RuntimeWarning: divide by zero encountered in divide
+  weights = len(labels_raw) / (len(class_counts) * class_counts)
+Epoch 1: Train Loss: 1.6302 | Val Loss: 1.6069 | Val F1: 0.096
+Epoch 2: Train Loss: 1.5981 | Val Loss: 1.5814 | Val F1: 0.096
+Epoch 3: Train Loss: 1.5727 | Val Loss: 1.5614 | Val F1: 0.238
+Epoch 4: Train Loss: 1.5554 | Val Loss: 1.5466 | Val F1: 0.109
+Epoch 5: Train Loss: 1.5426 | Val Loss: 1.5324 | Val F1: 0.234
+Epoch 6: Train Loss: 1.5261 | Val Loss: 1.5189 | Val F1: 0.256
+Epoch 7: Train Loss: 1.5137 | Val Loss: 1.5061 | Val F1: 0.216
+Epoch 8: Train Loss: 1.5042 | Val Loss: 1.4952 | Val F1: 0.183
+Epoch 9: Train Loss: 1.4908 | Val Loss: 1.4853 | Val F1: 0.183
+Epoch 10: Train Loss: 1.4834 | Val Loss: 1.4806 | Val F1: 0.183
+Epoch 11: Train Loss: 1.4799 | Val Loss: 1.4764 | Val F1: 0.183
+Epoch 12: Train Loss: 1.4761 | Val Loss: 1.4719 | Val F1: 0.183
+Epoch 13: Train Loss: 1.4743 | Val Loss: 1.4698 | Val F1: 0.183
+Epoch 14: Train Loss: 1.4714 | Val Loss: 1.4679 | Val F1: 0.183
+Epoch 15: Train Loss: 1.4718 | Val Loss: 1.4662 | Val F1: 0.183

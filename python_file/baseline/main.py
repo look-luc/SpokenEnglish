@@ -70,7 +70,11 @@ def main():
 
     class_counts = np.bincount(labels_raw, minlength=5)
 
-    weights = len(labels_raw) / (len(class_counts) * class_counts)
+    safe_counts = np.where(class_counts > 0, class_counts, 1)
+    weights = len(labels_raw) / (len(class_counts) * safe_counts)
+
+    weights[class_counts == 0] = 0.0
+
     weights_tensor = torch.tensor(weights, dtype=torch.float32).to(device)
 
     criterion = nn.CrossEntropyLoss(weight=weights_tensor)
