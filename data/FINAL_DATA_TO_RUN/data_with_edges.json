@@ -4,7 +4,9 @@
     "time_mark_ut1": "14.10 15.78",
     "time_mark_ut2": "15.01 16.78",
     "ut1_text": "... [Do the hooves]?",
+    "ut1_index": 3,
     "ut2_text": "[(H)=] <YWN Well,",
+    "ut2_index": 4,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -24,7 +26,9 @@
     "time_mark_ut1": "21.19 21.74",
     "time_mark_ut2": "21.26 22.24",
     "ut1_text": "[~Mae-] --",
+    "ut1_index": 8,
     "ut2_text": "[I'm gonna] (Hx) --",
+    "ut2_index": 9,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -39,7 +43,9 @@
     "time_mark_ut1": "22.24 23.23",
     "time_mark_ut2": "22.28 24.25",
     "ut1_text": "⌈Mae Lynne xxx ⌉ .",
+    "ut1_index": 10,
     "ut2_text": "[2(H) We're not2] gonna do the feet today,",
+    "ut2_index": 11,
     "overlap_type": "progressional",
     "dda_edge": [
       {
@@ -54,7 +60,9 @@
     "time_mark_ut1": "56.79 58.29",
     "time_mark_ut2": "56.94 57.79",
     "ut1_text": ".. [and I'm not] very strong.",
+    "ut1_index": 39,
     "ut2_text": "[Did they train you-] --",
+    "ut2_index": 40,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -74,7 +82,9 @@
     "time_mark_ut1": "58.29 58.69",
     "time_mark_ut2": "58.34 59.29",
     "ut1_text": "[2yeah2].",
+    "ut1_index": 41,
     "ut2_text": "[2Did2] they train you that -- ",
+    "ut2_index": 42,
     "overlap_type": "progressional",
     "dda_edge": [
       {
@@ -94,7 +104,9 @@
     "time_mark_ut1": "59.29 60.06",
     "time_mark_ut2": "59.57 59.92",
     "ut1_text": "X[3X3]*",
+    "ut1_index": 43,
     "ut2_text": " [3yeah3].",
+    "ut2_index": 44,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -109,7 +121,9 @@
     "time_mark_ut1": "60.73 61.80",
     "time_mark_ut2": "60.76 61.31",
     "ut1_text": ".. [So you have your] own equipment,",
+    "ut1_index": 46,
     "ut2_text": "[(H)]",
+    "ut2_index": 47,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -124,7 +138,9 @@
     "time_mark_ut1": "131.59 131.93",
     "time_mark_ut2": "131.59 131.96",
     "ut1_text": "[I bet].",
+    "ut1_index": 115,
     "ut2_text": "[(H) and <X then X>],",
+    "ut2_index": 116,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -144,7 +160,9 @@
     "time_mark_ut1": "165.02 166.71, 166.70 167.65",
     "time_mark_ut2": "166.65 167.05",
     "ut1_text": ".. has that .. little white line right the[re. and that]'s where you kinda SM> --",
+    "ut1_index": 152,
     "ut2_text": "[mhm].",
+    "ut2_index": 153,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -164,7 +182,9 @@
     "time_mark_ut1": "177.24 178.47",
     "time_mark_ut2": "178.23 178.44",
     "ut1_text": "(H) By doing [it-]. ",
+    "ut1_index": 163,
     "ut2_text": "  [really].",
+    "ut2_index": 164,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -184,7 +204,9 @@
     "time_mark_ut1": "251.37 254.12",
     "time_mark_ut2": "252.54 252.74",
     "ut1_text": "(H) .. We just [put] the shoes that were already made,",
+    "ut1_index": 234,
     "ut2_text": "[(THROAT)]",
+    "ut2_index": 235,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -199,7 +221,9 @@
     "time_mark_ut1": "254.12 254.64",
     "time_mark_ut2": "254.12 255.10",
     "ut1_text": "[2(THROAT)2]",
+    "ut1_index": 236,
     "ut2_text": "[2on2] a horse.",
+    "ut2_index": 237,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -214,7 +238,9 @@
     "time_mark_ut1": "265.18 265.68",
     "time_mark_ut2": "265.43 265.73",
     "ut1_text": "They're [really] --",
+    "ut1_index": 245,
     "ut2_text": "       [farrier]?",
+    "ut2_index": 246,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -234,7 +260,9 @@
     "time_mark_ut1": "297.67 299.69",
     "time_mark_ut2": "298.42 298.81",
     "ut1_text": "You sai[d you never] made the horseshoes,",
+    "ut1_index": 273,
     "ut2_text": "    [gonna say]",
+    "ut2_index": 274,
     "overlap_type": "progressional",
     "dda_edge": [
       {
@@ -254,7 +282,9 @@
     "time_mark_ut1": "350.81 352.94",
     "time_mark_ut2": "352.07 352.57",
     "ut1_text": "(H) .. And so [what you have] to [2do=2],",
+    "ut1_index": 327,
     "ut2_text": "[So every] --",
+    "ut2_index": 328,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -274,7 +304,9 @@
     "time_mark_ut1": "350.81 352.94",
     "time_mark_ut2": "352.57 353.42",
     "ut1_text": "(H) .. And so [what you have] to [2do=2],",
+    "ut1_index": 327,
     "ut2_text": "[2every2] uh=,",
+    "ut2_index": 329,
     "overlap_type": "progressional",
     "dda_edge": [
       {
@@ -294,7 +326,9 @@
     "time_mark_ut1": "400.94 401.15",
     "time_mark_ut2": "400.94 402.66",
     "ut1_text": "[Right].",
+    "ut1_index": 373,
     "ut2_text": "[(H)] then you have to round these back,",
+    "ut2_index": 374,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -314,7 +348,9 @@
     "time_mark_ut1": "410.19 411.59",
     "time_mark_ut2": "411.19 411.54",
     "ut1_text": "(H) I mean we ha=d to [do it],",
+    "ut1_index": 382,
     "ut2_text": " [(THROAT)]",
+    "ut2_index": 383,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -329,7 +365,9 @@
     "time_mark_ut1": "421.78 422.69",
     "time_mark_ut2": "421.78 422.98",
     "ut1_text": "[How many have you got].",
+    "ut1_index": 393,
     "ut2_text": "[(H) thirty] bucks,",
+    "ut2_index": 394,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -349,7 +387,9 @@
     "time_mark_ut1": "424.04 424.29",
     "time_mark_ut2": "424.06 424.99",
     "ut1_text": "twen[ty]",
+    "ut1_index": 396,
     "ut2_text": "[twen]ty-eight horses,",
+    "ut2_index": 397,
     "overlap_type": "progressional",
     "dda_edge": [
       {
@@ -369,7 +409,9 @@
     "time_mark_ut1": "497.85 499.63",
     "time_mark_ut2": "497.85 498.29",
     "ut1_text": "[This is the] grossest of everything.",
+    "ut1_index": 453,
     "ut2_text": "[<X What X>].",
+    "ut2_index": 454,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -389,7 +431,9 @@
     "time_mark_ut1": "515.86 517.36",
     "time_mark_ut2": "516.71 519.31",
     "ut1_text": "everybody [%=] --",
+    "ut1_index": 467,
     "ut2_text": "[I thought] they used the (THROAT) the horsehooves in .. for gelatin,",
+    "ut2_index": 468,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -409,7 +453,9 @@
     "time_mark_ut1": "636.97 637.34",
     "time_mark_ut2": "636.92 637.70",
     "ut1_text": "[Right].",
+    "ut1_index": 576,
     "ut2_text": "[(H)=] You know,",
+    "ut2_index": 577,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -420,7 +466,7 @@
       {
         "from": 577,
         "to": 575,
-        "label": "Expansion"
+        "label": "Expanding"
       }
     ]
   },
@@ -429,7 +475,9 @@
     "time_mark_ut1": "725.31 726.08",
     "time_mark_ut2": "725.74 726.44",
     "ut1_text": "... [Yeah].",
+    "ut1_index": 648,
     "ut2_text": "[It seems] weird,",
+    "ut2_index": 649,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -449,7 +497,9 @@
     "time_mark_ut1": "726.44 727.24",
     "time_mark_ut2": "726.69 726.89",
     "ut1_text": "that that's [2like2] that,",
+    "ut1_index": 650,
     "ut2_text": "[2X2]",
+    "ut2_index": 651,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -464,7 +514,9 @@
     "time_mark_ut1": "737.16 737.44",
     "time_mark_ut2": "737.18 738.50",
     "ut1_text": "[Yeah].",
+    "ut1_index": 665,
     "ut2_text": "[(TSK) (H)] Sure it's gonna be softer.",
+    "ut2_index": 666,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -484,7 +536,9 @@
     "time_mark_ut1": "760.70 762.45",
     "time_mark_ut2": "761.52 762.07, 762.07 762.45",
     "ut1_text": "and she's still got [a lot more=],",
+    "ut1_index": 682,
     "ut2_text": "[<X Where is the, uh= X>],",
+    "ut2_index": 683,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -504,7 +558,9 @@
     "time_mark_ut1": "764.24 765.34",
     "time_mark_ut2": "764.87 765.06, 765.06 765.59",
     "ut1_text": "Where [is the XX].",
+    "ut1_index": 686,
     "ut2_text": "[Oh. Right] here.",
+    "ut2_index": 687,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -524,7 +580,9 @@
     "time_mark_ut1": "768.17 768.38",
     "time_mark_ut2": "768.17 769.91",
     "ut1_text": "[XX].",
+    "ut1_index": 690,
     "ut2_text": "[(TSK)] But %anyway=,",
+    "ut2_index": 691,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -539,7 +597,9 @@
     "time_mark_ut1": "823.10 824.54",
     "time_mark_ut2": "823.92 824.27, 824.27 824.54",
     "ut1_text": "how does it get du=st [in it already].",
+    "ut1_index": 738,
     "ut2_text": "[We=ll, I] --",
+    "ut2_index": 739,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -559,7 +619,9 @@
     "time_mark_ut1": "840.92 842.84",
     "time_mark_ut2": "841.08 841.39",
     "ut1_text": "[In other words] I .. should be .. change filters.",
+    "ut1_index": 752,
     "ut2_text": "[Ugh=].",
+    "ut2_index": 753,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -579,7 +641,9 @@
     "time_mark_ut1": "852.08 852.83",
     "time_mark_ut2": "852.39 853.19",
     "ut1_text": "it [makes a mess].",
+    "ut1_index": 760,
     "ut2_text": "[<X I need X> new] filters.",
+    "ut2_index": 761,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -599,7 +663,9 @@
     "time_mark_ut1": "873.35 873.76",
     "time_mark_ut2": "873.70 875.15",
     "ut1_text": "M[hm],",
+    "ut1_index": 777,
     "ut2_text": "And] that doesn't bother em a bit,",
+    "ut2_index": 778,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -619,7 +685,9 @@
     "time_mark_ut1": "981.32 982.62",
     "time_mark_ut2": "982.12 983.51",
     "ut1_text": "(H) You're [standing] --",
+    "ut1_index": 880,
     "ut2_text": " [((MICROPHONE))]=",
+    "ut2_index": 881,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -634,7 +702,9 @@
     "time_mark_ut1": "996.28 996.63",
     "time_mark_ut2": "996.56 997.50",
     "ut1_text": "@you [@know].",
+    "ut1_index": 893,
     "ut2_text": "[So you're always bent over].",
+    "ut2_index": 894,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -654,7 +724,9 @@
     "time_mark_ut1": "1006.75 1008.06",
     "time_mark_ut2": "1007.45 1008.06",
     "ut1_text": "and you have the horse's hoof [right here]?",
+    "ut1_index": 903,
     "ut2_text": "[It's hard on your back].",
+    "ut2_index": 904,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -674,7 +746,9 @@
     "time_mark_ut1": "20.564 22.344",
     "time_mark_ut2": "20.895 21.757, 21.757 22.308",
     "ut1_text": "(H) [that's what he wanted to know].",
+    "ut1_index": 14,
     "ut2_text": "[I've never heard of it. So],",
+    "ut2_index": 15,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -694,7 +768,9 @@
     "time_mark_ut1": "26.295 28.572",
     "time_mark_ut2": "26.970 27.772",
     "ut1_text": "(H) then [he would have to go] off of that one.",
+    "ut1_index": 19,
     "ut2_text": "[<P<X Trash= X>P>] --",
+    "ut2_index": 20,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -709,7 +785,9 @@
     "time_mark_ut1": "28.572 30.700, 30.700 32.591",
     "time_mark_ut2": "29.975 32.591",
     "ut1_text": "If there was no prior brand [2inspection, (H) then he could just go off of this2],",
+    "ut1_index": 21,
     "ut2_text": "[2((DOOR_CLOSING))2]",
+    "ut2_index": 22,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -724,7 +802,9 @@
     "time_mark_ut1": "42.242 43.790, 43.790 44.590",
     "time_mark_ut2": "43.651 44.013",
     "ut1_text": "they reinstated it about a year ag[o. (H)] She --",
+    "ut1_index": 31,
     "ut2_text": "[Oh].",
+    "ut2_index": 32,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -744,7 +824,9 @@
     "time_mark_ut1": "47.737 48.766",
     "time_mark_ut2": "47.828 48.766",
     "ut1_text": ".. [if she didn't],",
+    "ut1_index": 37,
     "ut2_text": "[(H) I wouldn't know].",
+    "ut2_index": 38,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -764,7 +846,9 @@
     "time_mark_ut1": "48.766 49.018, 49.018 49.493, 49.493 50.534",
     "time_mark_ut2": "48.766 50.130",
     "ut1_text": "[2you know, I just need -- All I need to kn2]ow is,",
+    "ut1_index": 39,
     "ut2_text": "2I don't do any horse things2].",
+    "ut2_index": 40,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -784,7 +868,9 @@
     "time_mark_ut1": "55.793 56.198",
     "time_mark_ut2": "55.793 57.027",
     "ut1_text": "[Yeah].",
+    "ut1_index": 48,
     "ut2_text": "[(H)]",
+    "ut2_index": 49,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -799,7 +885,9 @@
     "time_mark_ut1": "58.193 58.681",
     "time_mark_ut2": "58.588 58.965",
     "ut1_text": ".. Unhu[nh].",
+    "ut1_index": 51,
     "ut2_text": "[O]kay.",
+    "ut2_index": 52,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -819,7 +907,9 @@
     "time_mark_ut1": "74.874 76.361, 76.361 76.726",
     "time_mark_ut2": "76.011 76.361, 76.361 77.300",
     "ut1_text": "but then that's not ... un[usual, cause I] --",
+    "ut1_index": 64,
     "ut2_text": "[Yeah. You don't] ride do you.",
+    "ut2_index": 65,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -839,7 +929,9 @@
     "time_mark_ut1": "97.658 99.172, 99.172 101.336",
     "time_mark_ut2": "98.787 99.345, 99.345 99.584",
     "ut1_text": "She's gonna work out great [here. (H)] She's gonna go competitive trail riding.",
+    "ut1_index": 85,
     "ut2_text": "[Alright. good].",
+    "ut2_index": 86,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -859,7 +951,9 @@
     "time_mark_ut1": "102.152 103.602, 103.602 104.077",
     "time_mark_ut2": "103.326 103.828",
     "ut1_text": "thirty-mile competitive trail [rides, with] a,",
+    "ut1_index": 89,
     "ut2_text": "[Wow].",
+    "ut2_index": 90,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -879,7 +973,9 @@
     "time_mark_ut1": "104.077 105.306, 105.306 108.202",
     "time_mark_ut2": "105.039 105.591",
     "ut1_text": "an eleven-year-old thi[2s year. (H)2]",
+    "ut1_index": 92,
     "ut2_text": "[2Wow2].",
+    "ut2_index": 93,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -899,7 +995,9 @@
     "time_mark_ut1": "118.839 119.668",
     "time_mark_ut2": "119.380 120.080",
     "ut1_text": "had a great [time].",
+    "ut1_index": 102,
     "ut2_text": "[Al]right.",
+    "ut2_index": 103,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -919,7 +1017,9 @@
     "time_mark_ut1": "120.080 121.642",
     "time_mark_ut2": "120.667 122.634",
     "ut1_text": "Was i- [2on a trail or something2]?",
+    "ut1_index": 104,
     "ut2_text": "[2And she now goes through2] water just fine.",
+    "ut2_index": 105,
     "overlap_type": "progressional",
     "dda_edge": [
       {
@@ -939,7 +1039,9 @@
     "time_mark_ut1": "122.634 124.002, 124.202 124.987",
     "time_mark_ut2": "123.780 124.331, 124.331 126.359",
     "ut1_text": "[3=. .. That's great3].",
+    "ut1_index": 106,
     "ut2_text": "[3Yes. she goes through3] running water this deep.",
+    "ut2_index": 107,
     "overlap_type": "progressional",
     "dda_edge": [
       {
@@ -959,7 +1061,9 @@
     "time_mark_ut1": "126.359 127.165, 127.165 129.362",
     "time_mark_ut2": "127.013 127.904",
     "ut1_text": "Happily n[4ow. (H)=4]",
+    "ut1_index": 107,
     "ut2_text": "[4That's great4].",
+    "ut2_index": 108,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -979,7 +1083,9 @@
     "time_mark_ut1": "132.082 133.628",
     "time_mark_ut2": "132.200 133.353, 133.353 134.783",
     "ut1_text": ".. [@@@ @X (H)]",
+    "ut1_index": 114,
     "ut2_text": "[(H) And, now] you don't even have to ask.",
+    "ut2_index": 115,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -994,7 +1100,9 @@
     "time_mark_ut1": "134.783 135.544",
     "time_mark_ut2": "134.991 135.878",
     "ut1_text": "That[2's great2].",
+    "ut1_index": 116,
     "ut2_text": "[2She just g2]oes.",
+    "ut2_index": 117,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -1014,7 +1122,9 @@
     "time_mark_ut1": "145.639 148.204",
     "time_mark_ut2": "146.615 147.254, 147.254 148.204 ",
     "ut1_text": "... We just .. [load the horses in a trailer <X home X>].",
+    "ut1_index": 126,
     "ut2_text": "[Alright. .. That's neat].",
+    "ut2_index": 127,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1034,7 +1144,9 @@
     "time_mark_ut1": "157.495 158.531",
     "time_mark_ut2": "157.625 157.901",
     "ut1_text": "[Or=] Santa Barbara.",
+    "ut1_index": 135,
     "ut2_text": "[Mm].",
+    "ut2_index": 136,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1054,7 +1166,9 @@
     "time_mark_ut1": "158.531 160.365",
     "time_mark_ut2": "160.157 160.847",
     "ut1_text": "... University of California Santa Barba[2ra2].",
+    "ut1_index": 137,
     "ut2_text": "[2And2] .. what's his name?",
+    "ut2_index": 138,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -1069,7 +1183,9 @@
     "time_mark_ut1": "162.537 162.802",
     "time_mark_ut2": "162.671 163.021",
     "ut1_text": "Ye[ah].",
+    "ut1_index": 141,
     "ut2_text": "[O]kay.",
+    "ut2_index": 142,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -1089,7 +1205,9 @@
     "time_mark_ut1": "164.273 167.091",
     "time_mark_ut2": "164.711 165.613",
     "ut1_text": "[he he he's back] on the= airplane tomorrow morning.",
+    "ut1_index": 144,
     "ut2_text": "[I'm bad on names].",
+    "ut2_index": 145,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1109,7 +1227,9 @@
     "time_mark_ut1": "167.091 168.641",
     "time_mark_ut2": "167.327 167.973",
     "ut1_text": "so [2we were .. driving2] around and,",
+    "ut1_index": 146,
     "ut2_text": "[2Oh wow2].",
+    "ut2_index": 147,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1129,7 +1249,9 @@
     "time_mark_ut1": "170.296 172.996, 172.996 174.161",
     "time_mark_ut2": "170.371 173.511",
     "ut1_text": ".. [(H)= .. Took him over to Garden of the Gods, and it was hail]ing on us,",
+    "ut1_index": 149,
     "ut2_text": "[((PAPER_CUTTING))]",
+    "ut2_index": 150,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1144,7 +1266,9 @@
     "time_mark_ut1": "0.00 2.29",
     "time_mark_ut2": "1.69 2.19",
     "ut1_text": "[Disgusting].",
+    "ut1_index": 1,
     "ut2_text": "[(TSK) Well you know],",
+    "ut2_index": 2,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -1164,7 +1288,9 @@
     "time_mark_ut1": "52.09 52.93",
     "time_mark_ut2": "52.81 52.93",
     "ut1_text": "that isn't there any[more],",
+    "ut1_index": 58,
     "ut2_text": "[<WH @@@ WH>]",
+    "ut2_index": 59,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1179,7 +1305,9 @@
     "time_mark_ut1": "53.21 54.36, 54.48 55.43",
     "time_mark_ut2": "53.83 54.48, 54.48 54.83, 54.83 55.43",
     "ut1_text": ".. So he never got his [radio. (H)=]",
+    "ut1_index": 61,
     "ut2_text": "[It's really hard. <WH Oh. Shit WH>].",
+    "ut2_index": 62,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -1199,7 +1327,9 @@
     "time_mark_ut1": "55.43 56.97",
     "time_mark_ut2": "56.30 56.60 ",
     "ut1_text": "So he got another radi[2o this2] summer,",
+    "ut1_index": 63,
     "ut2_text": "[2(H)=2]",
+    "ut2_index": 64,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1214,7 +1344,9 @@
     "time_mark_ut1": "59.23 60.48",
     "time_mark_ut2": "59.88 61.39",
     "ut1_text": "(Hx[=])",
+    "ut1_index": 66,
     "ut2_text": "[He's <X having X>]",
+    "ut2_index": 67,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1229,7 +1361,9 @@
     "time_mark_ut1": "0.00 1.24",
     "time_mark_ut2": "0.45 1.24",
     "ut1_text": "Is that just [carbonated water]?",
+    "ut1_index": 1,
     "ut2_text": "No thank you].",
+    "ut2_index": 2,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1249,7 +1383,9 @@
     "time_mark_ut1": "1.24 1.50, 1.50 2.36",
     "time_mark_ut2": "1.24 3.38",
     "ut1_text": "[2No, It's cream soda2].",
+    "ut1_index": 3,
     "ut2_text": "[2(H) No this is2] crea=m [3soda.",
+    "ut2_index": 4,
     "overlap_type": "progressional",
     "dda_edge": [
       {
@@ -1269,7 +1405,9 @@
     "time_mark_ut1": "1.24 3.38, 3.38 4.01",
     "time_mark_ut2": "2.96 3.64",
     "ut1_text": "[3soda. The3] best.",
+    "ut1_index": 4,
     "ut2_text": "  [3Oh= boy=3].",
+    "ut2_index": 5,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1284,7 +1422,9 @@
     "time_mark_ut1": "5.17 5.86",
     "time_mark_ut2": "5.44 6.74",
     "ut1_text": "I'm s[ure=].",
+    "ut1_index": 7,
     "ut2_text": "[Does it look] like cream soda?",
+    "ut2_index": 8,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -1304,7 +1444,9 @@
     "time_mark_ut1": "10.14 12.74",
     "time_mark_ut2": "12.24 13.14",
     "ut1_text": ".. Only the Sam's Club cans .. get so [warped].",
+    "ut1_index": 11,
     "ut2_text": "[(H)]=",
+    "ut2_index": 12,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1319,7 +1461,9 @@
     "time_mark_ut1": "10.14 12.74",
     "time_mark_ut2": "13.14 14.58",
     "ut1_text": ".. Only the Sam's Club cans .. get so [warped].",
+    "ut1_index": 11,
     "ut2_text": "(H) % [I think you should] [3write3] --",
+    "ut2_index": 13,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -1339,7 +1483,9 @@
     "time_mark_ut1": "12.24 13.14",
     "time_mark_ut2": "13.14 14.58",
     "ut1_text": "[(H)]=",
+    "ut1_index": 12,
     "ut2_text": "(H) % [I think you should] [3write3] --",
+    "ut2_index": 13,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1354,7 +1500,9 @@
     "time_mark_ut1": "13.14 14.58",
     "time_mark_ut2": "13.86 14.58",
     "ut1_text": "(H) % [I think you should] [3write3] --",
+    "ut1_index": 13,
     "ut2_text": "[<X Cause they're X>] [3X3] --",
+    "ut2_index": 14,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1374,7 +1522,9 @@
     "time_mark_ut1": "13.86 14.58",
     "time_mark_ut2": "14.26 15.33",
     "ut1_text": "[<X Cause they're X>] [3X3]",
+    "ut1_index": 14,
     "ut2_text": " [3Cause they're3] [4cheap ca=ns,",
+    "ut2_index": 15,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1394,7 +1544,9 @@
     "time_mark_ut1": "13.14 14.58",
     "time_mark_ut2": "14.26 15.33",
     "ut1_text": "(H) % [I think you should] [3write3] --",
+    "ut1_index": 13,
     "ut2_text": "[3Cause they're3] [4cheap ca=ns,",
+    "ut2_index": 15,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1414,7 +1566,9 @@
     "time_mark_ut1": "14.26 15.33, 15.33 15.93",
     "time_mark_ut2": "14.58 16.03",
     "ut1_text": "[3Cause they're3] [4cheap ca=ns, that's why4] --",
+    "ut1_index": 15,
     "ut2_text": " [4%Just .. %= write a letter to em4],",
+    "ut2_index": 16,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1434,7 +1588,9 @@
     "time_mark_ut1": "20.33 21.40",
     "time_mark_ut2": "20.71 21.11",
     "ut1_text": "This stuff [is] g=ood.",
+    "ut1_index": 20,
     "ut2_text": "[((POP-TOP))]",
+    "ut2_index": 21,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1449,7 +1605,9 @@
     "time_mark_ut1": "25.55 26.42",
     "time_mark_ut2": "26.18 28.03",
     "ut1_text": ".. Remember that [white] --",
+    "ut1_index": 25,
     "ut2_text": "[(H) They] only make that .. with Nutrasweet though,",
+    "ut2_index": 26,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1469,7 +1627,9 @@
     "time_mark_ut1": "31.78 32.33 ",
     "time_mark_ut2": "32.05 32.60",
     "ut1_text": "I don't [know].",
+    "ut1_index": 31,
     "ut2_text": "[(THROAT)]=",
+    "ut2_index": 32,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1484,7 +1644,9 @@
     "time_mark_ut1": "36.20 37.00",
     "time_mark_ut2": "36.20 38.65",
     "ut1_text": "[it's all] [2with2] --",
+    "ut1_index": 35,
     "ut2_text": "[But they don't] [2make2] this kind at a=ll [3any3]more.",
+    "ut2_index": 36,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1504,7 +1666,9 @@
     "time_mark_ut1": "36.20 37.00",
     "time_mark_ut2": "36.72 37.02",
     "ut1_text": "[it's all] [2with2] --",
+    "ut1_index": 35,
     "ut2_text": "[2(Hx)2]",
+    "ut2_index": 37,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1519,7 +1683,9 @@
     "time_mark_ut1": "36.20 38.65",
     "time_mark_ut2": "36.72 37.02",
     "ut1_text": "[But they don't] [2make2] this kind at a=ll [3any3]more.",
+    "ut1_index": 36,
     "ut2_text": " [2(Hx)2]",
+    "ut2_index": 37,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1534,7 +1700,9 @@
     "time_mark_ut1": "36.20 38.65",
     "time_mark_ut2": "37.89 38.27",
     "ut1_text": "[But they don't] [2make2] this kind at a=ll [3any3]more.",
+    "ut1_index": 36,
     "ut2_text": "[3(SNIFF)3]",
+    "ut2_index": 38,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1549,7 +1717,9 @@
     "time_mark_ut1": "38.65 39.09",
     "time_mark_ut2": "38.65 39.47",
     "ut1_text": "[4(THROAT)4]",
+    "ut1_index": 39,
     "ut2_text": "[4.. Oh they4] don't?",
+    "ut2_index": 40,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1564,7 +1734,9 @@
     "time_mark_ut1": "9.528 13.616",
     "time_mark_ut2": "9.897 10.727",
     "ut1_text": "... This [was the be]gin[2ning o=f the2]= uh= change.",
+    "ut1_index": 6,
     "ut2_text": " [Mhm].",
+    "ut2_index": 7,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1584,7 +1756,9 @@
     "time_mark_ut1": "9.528 13.616",
     "time_mark_ut2": "10.727 11.960",
     "ut1_text": "... This [was the be]gin[2ning o=f the2]= uh= change.",
+    "ut1_index": 6,
     "ut2_text": "[2<P XXXXX X P>2]",
+    "ut2_index": 8,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1599,7 +1773,9 @@
     "time_mark_ut1": "16.352 17.028",
     "time_mark_ut2": "16.352 17.630",
     "ut1_text": "... car[riages],",
+    "ut1_index": 12,
     "ut2_text": "[auto]mobile=s,",
+    "ut2_index": 13,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -1619,7 +1795,9 @@
     "time_mark_ut1": "21.546 23.327",
     "time_mark_ut2": "21.550 22.227",
     "ut1_text": "... [(TSK) (H)] I think Margaret though,",
+    "ut1_index": 17,
     "ut2_text": "[Mhm].",
+    "ut2_index": 18,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1639,7 +1817,9 @@
     "time_mark_ut1": "30.460 31.375",
     "time_mark_ut2": "30.624 31.947",
     "ut1_text": ".. @@[@@]",
+    "ut1_index": 23,
     "ut2_text": "[there is] no doubt.",
+    "ut2_index": 24,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1654,7 +1834,9 @@
     "time_mark_ut1": "35.198 36.251",
     "time_mark_ut2": "35.656 36.251",
     "ut1_text": "but he is[n't],",
+    "ut1_index": 27,
     "ut2_text": " [Hm].",
+    "ut2_index": 28,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1674,7 +1856,9 @@
     "time_mark_ut1": "36.251 38.924",
     "time_mark_ut2": "36.645 37.210",
     "ut1_text": "H) And there would [2never2] be= a Jacky Bast.",
+    "ut1_index": 29,
     "ut2_text": "[2(SNIFF)2]",
+    "ut2_index": 30,
     "overlap_type": "other",
     "dda_edge": [
       {
@@ -1689,7 +1873,9 @@
     "time_mark_ut1": "47.441 48.063",
     "time_mark_ut2": "47.441 49.354",
     "ut1_text": "[Mhm].",
+    "ut1_index": 35,
     "ut2_text": "[(H) Was so] other worldly,",
+    "ut2_index": 36,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -1709,7 +1895,9 @@
     "time_mark_ut1": "49.354 50.048",
     "time_mark_ut2": "49.354 49.857",
     "ut1_text": "[2and everything2] else,",
+    "ut1_index": 37,
     "ut2_text": "[2mhm2].",
+    "ut2_index": 38,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1729,7 +1917,9 @@
     "time_mark_ut1": "51.675 53.229",
     "time_mark_ut2": "52.177        52.835",
     "ut1_text": ".. as to what [was going] on.",
+    "ut1_index": 40,
     "ut2_text": "[Mhm].",
+    "ut2_index": 41,
     "overlap_type": "recognitional",
     "dda_edge": [
       {
@@ -1749,7 +1939,9 @@
     "time_mark_ut1": "64.650 64.925",
     "time_mark_ut2": "64.650 65.894",
     "ut1_text": "Mh[m].",
+    "ut1_index": 52,
     "ut2_text": "[and she] didn't care,",
+    "ut2_index": 53,
     "overlap_type": "transitional",
     "dda_edge": [
       {
@@ -1760,6 +1952,2310 @@
       {
         "from": 53,
         "to": 50,
+        "label": "CollaborativeCompletion"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "0.00 6.52",
+    "time_mark_ut2": "4.43 5.78",
+    "ut1_text": "How [can you teach a three-year-old to] ta=p [2dance2].",
+    "ut1_index": 1,
+    "ut2_text": "[I can't imagine teaching a] --",
+    "ut2_index": 2,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 1,
+        "to": 1,
+        "label": "RhetoricalQuestion"
+      },
+      {
+        "from": 2,
+        "to": 1,
+        "label": "Acknowledge, Answer"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "0.00 6.52",
+    "time_mark_ut2": "6.08 6.35",
+    "ut1_text": "How [can you teach a three-year-old to] ta=p [2dance2].",
+    "ut1_index": 1,
+    "ut2_text": "[2@Yeah2],",
+    "ut2_index": 3,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 1,
+        "to": 1,
+        "label": "RhetoricalQuestion"
+      },
+      {
+        "from": 3,
+        "to": 1,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "17.00 19.10",
+    "time_mark_ut2": "19.00 19.75",
+    "ut1_text": "the movie with that .. really hot tap danc[er].",
+    "ut1_index": 14,
+    "ut2_text": "[Oh] that ki=d.",
+    "ut2_index": 15,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 14,
+        "to": 12,
+        "label": "Restatement, Instantiating"
+      },
+      {
+        "from": 15,
+        "to": 14,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "21.82 22.57",
+    "time_mark_ut2": "22.37 24.25",
+    "ut1_text": "and [I missed him].",
+    "ut1_index": 17,
+    "ut2_text": "[at the .. at] the ja=zz .. t[2ap thing or whatever2].",
+    "ut2_index": 18,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 17,
+        "to": 16,
+        "label": "Conjunction"
+      },
+      {
+        "from": 18,
+        "to": 16,
+        "label": "CollaborativeCompletion"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "22.37 24.25",
+    "time_mark_ut2": "23.35 24.32",
+    "ut1_text": "[at the .. at] the ja=zz .. t[2ap thing or whatever2].",
+    "ut1_index": 18,
+    "ut2_text": "[2Was he a little kid2]?",
+    "ut2_index": 19,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 18,
+        "to": 16,
+        "label": "CollaborativeCompletion"
+      },
+      {
+        "from": 19,
+        "to": 19,
+        "label": "QuestionInfoRequest"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "24.32 25.75",
+    "time_mark_ut2": "24.48 25.28",
+    "ut1_text": "[3No he's sixteen now=3].",
+    "ut1_index": 20,
+    "ut2_text": "[3(H) No he's like3] --",
+    "ut2_index": 21,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 20,
+        "to": 19,
+        "label": "Answer"
+      },
+      {
+        "from": 21,
+        "to": 19,
+        "label": "Answer"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "26.87 28.78",
+    "time_mark_ut2": "27.42 27.82, 27.82 29.23",
+    "ut1_text": "but he teaches [these classes in New York].",
+    "ut1_index": 23,
+    "ut2_text": "[<X That X> boy, .. he's supposed to be awe]some.",
+    "ut2_index": 24,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 23,
+        "to": 22,
+        "label": "Contrast"
+      },
+      {
+        "from": 24,
+        "to": 20,
+        "label": "Evaluating, GivingDetails"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "29.63 30.73",
+    "time_mark_ut2": "30.48 30.98",
+    "ut1_text": "... Really fa[=st].",
+    "ut1_index": 27,
+    "ut2_text": "[Hm].",
+    "ut2_index": 28,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 27,
+        "to": 24,
+        "label": "Acknowledge, Restatement, Expanding"
+      },
+      {
+        "from": 28,
+        "to": 27,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "30.98 33.18",
+    "time_mark_ut2": "32.90 33.48",
+    "ut1_text": "... But I'm sure that was the .. the [2impetus2].",
+    "ut1_index": 29,
+    "ut2_text": "[2Have you2] seen him?",
+    "ut2_index": 30,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 29,
+        "to": 29,
+        "label": "Statement"
+      },
+      {
+        "from": 30,
+        "to": 30,
+        "label": "QuestionInfoRequest"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "35.20 37.62",
+    "time_mark_ut2": "37.27 37.65",
+    "ut1_text": ".. You .. you probably read the same Examiner article [I read].",
+    "ut1_index": 33,
+    "ut2_text": "[Yeah],",
+    "ut2_index": 34,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 33,
+        "to": 32,
+        "label": "Acknowledge, Instantiating"
+      },
+      {
+        "from": 34,
+        "to": 33,
+        "label": "Accept, Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "39.57 41.90",
+    "time_mark_ut2": "41.32 41.86",
+    "ut1_text": "he doesn't realize a human being can't tap [that fa=]st?",
+    "ut1_index": 38,
+    "ut2_text": "[Right].",
+    "ut2_index": 39,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 38,
+        "to": 38,
+        "label": "RhetoricalQuestion"
+      },
+      {
+        "from": 39,
+        "to": 38,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "44.00 45.91",
+    "time_mark_ut2": "44.95 45.30",
+    "ut1_text": "... he's teaching [these] cla=sses,",
+    "ut1_index": 44,
+    "ut2_text": "[Hm].",
+    "ut2_index": 45,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 44,
+        "to": 43,
+        "label": "Instantiating"
+      },
+      {
+        "from": 45,
+        "to": 44,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "47.53 47.86",
+    "time_mark_ut2": "47.59 47.94",
+    "ut1_text": "[<X And X>],",
+    "ut1_index": 47,
+    "ut2_text": "[Yeah].",
+    "ut2_index": 48,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 47,
+        "to": 46,
+        "label": "Conjunction, Incomplete"
+      },
+      {
+        "from": 48,
+        "to": 46,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "48.49 50.09",
+    "time_mark_ut2": "48.69 52.20",
+    "ut1_text": "... He does[n't explain anything precisely].",
+    "ut1_index": 50,
+    "ut2_text": "[He has to double it dow=n to] like o=ne f=ifth speed or something,",
+    "ut2_index": 51,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 50,
+        "to": 50,
+        "label": "Statement"
+      },
+      {
+        "from": 51,
+        "to": 51,
+        "label": "Statement"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "55.91 61.26",
+    "time_mark_ut2": "59.81 60.56",
+    "ut1_text": "... Prob[ably XX]",
+    "ut1_index": 55,
+    "ut2_text": " [I mean he]",
+    "ut2_index": 56,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 55,
+        "to": 54,
+        "label": "Acknowledge"
+      },
+      {
+        "from": 56,
+        "to": 54,
+        "label": "Conjunction, GivingDetails"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "55.91 61.26",
+    "time_mark_ut2": "59.81 60.56",
+    "ut1_text": "[2XXX2] --",
+    "ut1_index": 55,
+    "ut2_text": "[2has a bro-2] --",
+    "ut2_index": 56,
+    "overlap_type": "other",
+    "dda_edge": [
+      {
+        "from": 56,
+        "to": 54,
+        "label": "Conjunction, GivingDetails"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "59.81 60.56",
+    "time_mark_ut2": "61.36 63.58",
+    "ut1_text": " [I mean he] [2has a bro-2] --",
+    "ut1_index": 56,
+    "ut2_text": "[2XXXX could have2] see=n him.",
+    "ut2_index": 57,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 56,
+        "to": 54,
+        "label": "Conjunction, GivingDetails"
+      },
+      {
+        "from": 57,
+        "to": 57,
+        "label": "Incomplete"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "61.36 63.58",
+    "time_mark_ut2": "62.97 63.86",
+    "ut1_text": "I guess that means his broken leg is [3@doing @okay3].",
+    "ut1_index": 58,
+    "ut2_text": "[3I was wonder3]ing about that,",
+    "ut2_index": 59,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 58,
+        "to": 58,
+        "label": "Statement"
+      },
+      {
+        "from": 59,
+        "to": 58,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "63.86 65.25",
+    "time_mark_ut2": "64.24 64.99",
+    "ut1_text": "I was imagining [4he had broke an arm4] or something.",
+    "ut1_index": 60,
+    "ut2_text": "[4<HI Oh yeah= HI>4].",
+    "ut2_index": 61,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 60,
+        "to": 59,
+        "label": "GivingDetails, GivingManner"
+      },
+      {
+        "from": 61,
+        "to": 60,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "66.05 66.70",
+    "time_mark_ut2": "66.35 66.76",
+    "ut1_text": ".. Yeah[=].",
+    "ut1_index": 63,
+    "ut2_text": "[That's like],",
+    "ut2_index": 64,
+    "overlap_type": "other",
+    "dda_edge": [
+      {
+        "from": 63,
+        "to": 62,
+        "label": "Answer"
+      },
+      {
+        "from": 64,
+        "to": 63,
+        "label": "Expanding"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "66.76 68.71",
+    "time_mark_ut2": "68.38 68.96",
+    "ut1_text": ".. <X I guess X> that he was being hauled around in a little wagon [2and stuff2]",
+    "ut1_index": 65,
+    "ut2_text": " [2Right2].",
+    "ut2_index": 66,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 65,
+        "to": 63,
+        "label": "Expanding"
+      },
+      {
+        "from": 66,
+        "to": 65,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "68.96 73.50",
+    "time_mark_ut2": "72.10 73.20, 73.20 75.07",
+    "ut1_text": "... [3He healed very quickly3].",
+    "ut1_index": 67,
+    "ut2_text": " [3<X Guess X> kids' bo=nes,",
+    "ut2_index": 68,
+    "overlap_type": "trasitional",
+    "dda_edge": [
+      {
+        "from": 67,
+        "to": 65,
+        "label": "Acknowledge"
+      },
+      {
+        "from": 68,
+        "to": 65,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "73.20 75.07",
+    "time_mark_ut2": "73.72 74.37",
+    "ut1_text": "just like3] .. [4grow4] [5back5] really fast (Hx).",
+    "ut1_index": 69,
+    "ut2_text": "[4M4]",
+    "ut2_index": 70,
+    "overlap_type": "other",
+    "dda_edge": [
+      {
+        "from": 69,
+        "to": 68,
+        "label": "Expanding"
+      },
+      {
+        "from": 70,
+        "to": 69,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "73.20 75.07",
+    "time_mark_ut2": "73.72 74.37",
+    "ut1_text": "just like3] .. [4grow4] [5back5] really fast (Hx).",
+    "ut1_index": 69,
+    "ut2_text": "[5hm=5].",
+    "ut2_index": 70,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 69,
+        "to": 68,
+        "label": "Expanding"
+      },
+      {
+        "from": 70,
+        "to": 69,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "73.20 75.07",
+    "time_mark_ut2": "73.81 74.22",
+    "ut1_text": "just like3] .. [4grow4] [5back5] really fast (Hx).",
+    "ut1_index": 69,
+    "ut2_text": "[5Yeah5].",
+    "ut2_index": 71,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 69,
+        "to": 68,
+        "label": "Expanding"
+      },
+      {
+        "from": 71,
+        "to": 69,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "81.50 83.30",
+    "time_mark_ut2": "82.17 83.47",
+    "ut1_text": ".. Cause they're [so X][2XXX2].",
+    "ut1_index": 77,
+    "ut2_text": "[Cause they're made]",
+    "ut2_index": 78,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 77,
+        "to": 76,
+        "label": "Causing, Incomplete"
+      },
+      {
+        "from": 78,
+        "to": 76,
+        "label": "Causing"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "81.50 83.30",
+    "time_mark_ut2": "82.17 83.47",
+    "ut1_text": ".. Cause they're [so X][2XXX2].",
+    "ut1_index": 77,
+    "ut2_text": "[2of rubber2].",
+    "ut2_index": 78,
+    "overlap_type": "other",
+    "dda_edge": [
+      {
+        "from": 77,
+        "to": 76,
+        "label": "Causing, Incomplete"
+      },
+      {
+        "from": 78,
+        "to": 76,
+        "label": "Causing"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "81.50 83.30",
+    "time_mark_ut2": "82.50 84.58",
+    "ut1_text": ".. Cause they're [so X][2XXX2].",
+    "ut1_index": 77,
+    "ut2_text": "[2But they have more2] cartilage than w-,",
+    "ut2_index": 79,
+    "overlap_type": "other",
+    "dda_edge": [
+      {
+        "from": 77,
+        "to": 76,
+        "label": "Causing, Incomplete"
+      },
+      {
+        "from": 79,
+        "to": 78,
+        "label": "Contrast, Incomplete"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "82.17 83.47",
+    "time_mark_ut2": "82.50 84.58",
+    "ut1_text": "[Cause they're made] [2of rubber2].",
+    "ut1_index": 78,
+    "ut2_text": "[2But they have more2] cartilage than w-,",
+    "ut2_index": 79,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 78,
+        "to": 76,
+        "label": "Causing"
+      },
+      {
+        "from": 79,
+        "to": 78,
+        "label": "Contrast, Incomplete"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "84.58 84.93 ",
+    "time_mark_ut2": "84.75 84.88",
+    "ut1_text": "... [3you know3].",
+    "ut1_index": 80,
+    "ut2_text": "[3Yeah3],",
+    "ut2_index": 81,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 80,
+        "to": 79,
+        "label": "TakeStock"
+      },
+      {
+        "from": 81,
+        "to": 79,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "85.48 87.18",
+    "time_mark_ut2": "86.48 86.65, 86.65 88.68",
+    "ut1_text": ".. aren't their k- .. legs [pretty soft]?",
+    "ut1_index": 83,
+    "ut2_text": " [Yeah, there's] less calcium % deposits <X in them X>.",
+    "ut2_index": 84,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 83,
+        "to": 83,
+        "label": "OpenQuestion"
+      },
+      {
+        "from": 84,
+        "to": 83,
+        "label": "Answer"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "88.68 89.78  ",
+    "time_mark_ut2": "89.05 89.45",
+    "ut1_text": "... [2And2] also,",
+    "ut1_index": 85,
+    "ut2_text": "[2Mm2].",
+    "ut2_index": 86,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 85,
+        "to": 84,
+        "label": "Conjunction"
+      },
+      {
+        "from": 86,
+        "to": 84,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "95.64 97.33",
+    "time_mark_ut2": "95.75 98.58",
+    "ut1_text": "and [then that turns into hard bone].",
+    "ut1_index": 93,
+    "ut2_text": "[So that's why they always have] ... more flexibility.",
+    "ut2_index": 94,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 93,
+        "to": 91,
+        "label": "Conjunction, Acknowledge"
+      },
+      {
+        "from": 94,
+        "to": 91,
+        "label": "CausedBy"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "98.58 99.58",
+    "time_mark_ut2": "98.68 98.93",
+    "ut1_text": "Cause [2as2] they're growing,",
+    "ut1_index": 95,
+    "ut2_text": "[2Hm2].",
+    "ut2_index": 96,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 95,
+        "to": 94,
+        "label": "Causing"
+      },
+      {
+        "from": 96,
+        "to": 95,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "104.83 107.28",
+    "time_mark_ut2": "105.90 107.15",
+    "ut1_text": "... They get old and cranky [like the rest of] [2us2].",
+    "ut1_index": 103,
+    "ut2_text": "[it stops][2=2].",
+    "ut2_index": 104,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 103,
+        "to": 102,
+        "label": "Expanding"
+      },
+      {
+        "from": 104,
+        "to": 102,
+        "label": "Expanding"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "104.83 107.28",
+    "time_mark_ut2": "106.75 108.36",
+    "ut1_text": "... They get old and cranky [like the rest of] [2us2].",
+    "ut1_index": 103,
+    "ut2_text": "[2@@2]@[3@@3]@",
+    "ut2_index": 105,
+    "overlap_type": "other",
+    "dda_edge": [
+      {
+        "from": 103,
+        "to": 102,
+        "label": "Expanding"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "106.75 108.36",
+    "time_mark_ut2": "107.25 107.65",
+    "ut1_text": "[2@@2]@[3@@3]@",
+    "ut1_index": 105,
+    "ut2_text": "[3Unhunh3],",
+    "ut2_index": 106,
+    "overlap_type": "other",
+    "dda_edge": [
+      {
+        "from": 106,
+        "to": 104,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "108.36 109.36",
+    "time_mark_ut2": "108.41 109.36",
+    "ut1_text": "... [4(SNIFF)4]",
+    "ut1_index": 107,
+    "ut2_text": "[4and then they break4].",
+    "ut2_index": 108,
+    "overlap_type": "other",
+    "dda_edge": [
+      {
+        "from": 108,
+        "to": 104,
+        "label": "Conjunction"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "114.77 115.92",
+    "time_mark_ut2": "115.58 116.29",
+    "ut1_text": "... Stiff[=].",
+    "ut1_index": 114,
+    "ut2_text": "  [In]flexible?",
+    "ut2_index": 115,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 114,
+        "to": 112,
+        "label": "Restatement"
+      },
+      {
+        "from": 115,
+        "to": 112,
+        "label": "Correction"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "128.81 129.40",
+    "time_mark_ut2": "129.09 129.49",
+    "ut1_text": "[as a%] --",
+    "ut1_index": 121,
+    "ut2_text": "[You will]?",
+    "ut2_index": 122,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 121,
+        "to": 121,
+        "label": "Incomplete"
+      },
+      {
+        "from": 122,
+        "to": 120,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "131.64 132.09",
+    "time_mark_ut2": "131.66 132.16",
+    "ut1_text": "[(H)]",
+    "ut1_index": 125,
+    "ut2_text": "[Oh really].",
+    "ut2_index": 126,
+    "overlap_type": "other",
+    "dda_edge": [
+      {
+        "from": 126,
+        "to": 124,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "132.09 132.73",
+    "time_mark_ut2": "132.57 133.52",
+    "ut1_text": "That's not [bad].",
+    "ut1_index": 128,
+    "ut2_text": "[to] group classes,",
+    "ut2_index": 129,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 128,
+        "to": 124,
+        "label": "Acknowledge, Accept, Evaluating"
+      },
+      {
+        "from": 129,
+        "to": 124,
+        "label": "Correction, Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "134.88 135.73",
+    "time_mark_ut2": "135.33 135.83",
+    "ut1_text": "I should [do that].",
+    "ut1_index": 133,
+    "ut2_text": "[Oh really]?",
+    "ut2_index": 134,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 133,
+        "to": 120,
+        "label": "Motivating"
+      },
+      {
+        "from": 134,
+        "to": 133,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "138.97 141.26",
+    "time_mark_ut2": "139.46 141.01",
+    "ut1_text": "[@@@@@@@]@",
+    "ut1_index": 138,
+    "ut2_text": "[(H)= (Hx)=]",
+    "ut2_index": 139,
+    "overlap_type": "other",
+    "dda_edge": []
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "141.26 142.12",
+    "time_mark_ut2": "141.56 141.86",
+    "ut1_text": "Some [2ben2]efit,",
+    "ut1_index": 140,
+    "ut2_text": "[2Mm2],",
+    "ut2_index": 141,
+    "overlap_type": "recognitional",
+    "dda_edge": [
+      {
+        "from": 140,
+        "to": 136,
+        "label": "Evaluating, Incomplete"
+      },
+      {
+        "from": 141,
+        "to": 140,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "142.41 142.71",
+    "time_mark_ut2": "142.41 143.92",
+    "ut1_text": "[@@@]",
+    "ut1_index": 143,
+    "ut2_text": "[@]@@[2@@2]@",
+    "ut2_index": 144,
+    "overlap_type": "other",
+    "dda_edge": []
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "142.41 143.92",
+    "time_mark_ut2": "143.01 143.51",
+    "ut1_text": "[@]@@[2@@2]@",
+    "ut1_index": 144,
+    "ut2_text": "[2Mhm2],",
+    "ut2_index": 145,
+    "overlap_type": "other",
+    "dda_edge": [
+      {
+        "from": 145,
+        "to": 140,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "145.76 149.08",
+    "time_mark_ut2": "147.38 148.44",
+    "ut1_text": "[@@@@@]",
+    "ut1_index": 148,
+    "ut2_text": "[@@@@@@@][2@@@(H)@@2]",
+    "ut2_index": 149,
+    "overlap_type": "other",
+    "dda_edge": []
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "145.76 149.08",
+    "time_mark_ut2": "147.38 148.44,148.44 151.03",
+    "ut1_text": "[@@@@@@@][2@@@(H)@@2]",
+    "ut1_index": 149,
+    "ut2_text": "[2<VOX Oh= VOX>, I cannot be2]l=ieve",
+    "ut2_index": 150,
+    "overlap_type": "other",
+    "dda_edge": [
+      {
+        "from": 150,
+        "to": 147,
+        "label": "Acknowledge, Appreciation"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "148.44 151.03, 151.03 152.88",
+    "time_mark_ut2": "149.78 151.18, 151.18 154.38",
+    "ut1_text": "[3you said that. What a jerk you are (Hx)3].",
+    "ut1_index": 151,
+    "ut2_text": "[3@(H)@@@@ @3] @ [4@4]",
+    "ut2_index": 152,
+    "overlap_type": "other",
+    "dda_edge": [
+      {
+        "from": 151,
+        "to": 147,
+        "label": "Evaluating"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "151.18 154.38",
+    "time_mark_ut2": "153.23 153.88",
+    "ut1_text": "@ @3] @ [4@4]",
+    "ut1_index": 152,
+    "ut2_text": "[4@@4]",
+    "ut2_index": 153,
+    "overlap_type": "other",
+    "dda_edge": []
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "157.01 158.16",
+    "time_mark_ut2": "157.58 158.03",
+    "ut1_text": "He's bigger than [I am].",
+    "ut1_index": 158,
+    "ut2_text": " [XX],",
+    "ut2_index": 159,
+    "overlap_type": "other",
+    "dda_edge": [
+      {
+        "from": 158,
+        "to": 157,
+        "label": "Answer, Reject"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "161.19 162.29",
+    "time_mark_ut2": "161.69 162.64",
+    "ut1_text": "he's my [2friend2] @>.",
+    "ut1_index": 165,
+    "ut2_text": "[2Tha-2] [3that's right3].",
+    "ut2_index": 166,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 165,
+        "to": 163,
+        "label": "Expanding"
+      },
+      {
+        "from": 166,
+        "to": 165,
+        "label": "Acknowledge, Accept"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "221.64 222.83",
+    "time_mark_ut2": "222.23 222.48, 222.48 223.06",
+    "ut1_text": "... Or [is that a real] --",
+    "ut1_index": 223,
+    "ut2_text": " [Yeah, that's a] tape.",
+    "ut2_index": 224,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 223,
+        "to": 222,
+        "label": "Disjunction"
+      },
+      {
+        "from": 224,
+        "to": 223,
+        "label": "Answer"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "255.37 257.67",
+    "time_mark_ut2": "257.37 257.89",
+    "ut1_text": "Well that would be nice to have a little jazz band next [4door4],",
+    "ut1_index": 264,
+    "ut2_text": "[4Right4].",
+    "ut2_index": 265,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 264,
+        "to": 264,
+        "label": "Opinion"
+      },
+      {
+        "from": 265,
+        "to": 264,
+        "label": "Acknowledge, Accept"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "264.31 265.56",
+    "time_mark_ut2": "265.58 265.78",
+    "ut1_text": ".. kissing each other on the side[walk].",
+    "ut1_index": 272,
+    "ut2_text": "[Hm=].",
+    "ut2_index": 273,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 272,
+        "to": 270,
+        "label": "Conjunction"
+      },
+      {
+        "from": 273,
+        "to": 272,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "273.68 274.28",
+    "time_mark_ut2": "273.78 274.53",
+    "ut1_text": "You saw [2that X2],",
+    "ut1_index": 282,
+    "ut2_text": "  [2I saw2] that,",
+    "ut2_index": 283,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 282,
+        "to": 282,
+        "label": "QuestionInfoRequest"
+      },
+      {
+        "from": 283,
+        "to": 282,
+        "label": "Answer"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "292.53 293.78",
+    "time_mark_ut2": "293.35 294.15",
+    "ut1_text": "Those ki=ds are [just] --",
+    "ut1_index": 305,
+    "ut2_text": "[sitting] in the gutter.",
+    "ut2_index": 306,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 305,
+        "to": 305,
+        "label": "Opinion, Incomplete"
+      },
+      {
+        "from": 306,
+        "to": 305,
+        "label": "CollaborativeCompletion"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "301.00 302.40",
+    "time_mark_ut2": "301.70 303.48",
+    "ut1_text": "nya nya nya nya nya [5nya nya VOX>5].",
+    "ut1_index": 315,
+    "ut2_text": "[5Does she even5] have a b- a man-?",
+    "ut2_index": 316,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 315,
+        "to": 315,
+        "label": "Joke, Exclamation"
+      },
+      {
+        "from": 316,
+        "to": 316,
+        "label": "QuestionInfoRequest"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "306.00 306.85",
+    "time_mark_ut2": "306.00 306.85",
+    "ut1_text": "[A ma=n].",
+    "ut1_index": 319,
+    "ut2_text": "[A ma=n].",
+    "ut2_index": 320,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 319,
+        "to": 318,
+        "label": "Answer"
+      },
+      {
+        "from": 320,
+        "to": 318,
+        "label": "Answer"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "308.16 309.26",
+    "time_mark_ut2": "308.81 309.96",
+    "ut1_text": "... She has some [kind of a] --",
+    "ut1_index": 322,
+    "ut2_text": " [At least] temporarily,",
+    "ut2_index": 323,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 322,
+        "to": 316,
+        "label": "Answer, Incomplete"
+      },
+      {
+        "from": 323,
+        "to": 322,
+        "label": "CollaborativeCompletion"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "337.21 337.91",
+    "time_mark_ut2": "337.36 338.76",
+    "ut1_text": "the [cow=].",
+    "ut1_index": 358,
+    "ut2_text": "[who has] .. frie=nds?",
+    "ut2_index": 359,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 358,
+        "to": 358,
+        "label": "Exclamation, SelfTalk"
+      },
+      {
+        "from": 359,
+        "to": 359,
+        "label": "OpenQuestion"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "344.88 346.10",
+    "time_mark_ut2": "345.15 345.90",
+    "ut1_text": "Gee[4zh- Zheezhee4].",
+    "ut1_index": 371,
+    "ut2_text": "[4The @butter- @4],",
+    "ut2_index": 372,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 371,
+        "to": 370,
+        "label": "Answer"
+      },
+      {
+        "from": 372,
+        "to": 369,
+        "label": "Restatement"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "362.10 363.05",
+    "time_mark_ut2": "362.82 363.62",
+    "ut1_text": "... once he stopped [3running3].",
+    "ut1_index": 388,
+    "ut2_text": "[3Cause he's3] so fat,",
+    "ut2_index": 389,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 388,
+        "to": 387,
+        "label": "Before"
+      },
+      {
+        "from": 389,
+        "to": 388,
+        "label": "Causing"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "380.25 382.31",
+    "time_mark_ut2": "381.80 382.25",
+    "ut1_text": "... [Really].",
+    "ut1_index": 403,
+    "ut2_text": "  [I can't] t- --",
+    "ut2_index": 404,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 403,
+        "to": 402,
+        "label": "Restatement"
+      },
+      {
+        "from": 404,
+        "to": 404,
+        "label": "Incomplete"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "382.91 384.01, 384.01 384.36",
+    "time_mark_ut2": "384.13 384.93",
+    "ut1_text": "She just looks pregnant? [now]?",
+    "ut1_index": 406,
+    "ut2_text": "[She's] pregnant.",
+    "ut2_index": 407,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 406,
+        "to": 406,
+        "label": "OpenQuestion"
+      },
+      {
+        "from": 407,
+        "to": 406,
+        "label": "Answer"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "439.36 440.21",
+    "time_mark_ut2": "439.58 441.63",
+    "ut1_text": ".. Yeah [2the other2] --",
+    "ut1_index": 458,
+    "ut2_text": " [2In addition2] to a mustache and a beard.",
+    "ut2_index": 459,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 458,
+        "to": 458,
+        "label": "Incomplete"
+      },
+      {
+        "from": 459,
+        "to": 455,
+        "label": "Conjunction"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "452.38 453.88",
+    "time_mark_ut2": "453.43 454.13",
+    "ut1_text": "... What's an Oba Oba [skit].",
+    "ut1_index": 472,
+    "ut2_text": " [Oba O]ba,",
+    "ut2_index": 473,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 472,
+        "to": 472,
+        "label": "OpenQuestion"
+      },
+      {
+        "from": 473,
+        "to": 472,
+        "label": "Answer"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "456.50 458.25",
+    "time_mark_ut2": "457.67 458.17",
+    "ut1_text": "... I never [saw that].",
+    "ut1_index": 478,
+    "ut2_text": "[Look like] --",
+    "ut2_index": 479,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 478,
+        "to": 474,
+        "label": "GivingDetails"
+      },
+      {
+        "from": 479,
+        "to": 479,
+        "label": "Incomplete"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC002.trn",
+    "time_mark_ut1": "475.30 476.65",
+    "time_mark_ut2": "475.95 477.95",
+    "ut1_text": "... Which one [is it]?",
+    "ut1_index": 504,
+    "ut2_text": "[Or do] Indonesian [2people look Black2].",
+    "ut2_index": 505,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 504,
+        "to": 504,
+        "label": "OpenQuestion"
+      },
+      {
+        "from": 505,
+        "to": 503,
+        "label": "Disjunction"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC009.trn",
+    "time_mark_ut1": "48.23 49.78",
+    "time_mark_ut2": "49.43 51.18",
+    "ut1_text": "... ex squa[red].",
+    "ut1_index": 14,
+    "ut2_text": "[Because] you brought this .. over here.",
+    "ut2_index": 15,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 14,
+        "to": 12,
+        "label": "Expanding"
+      },
+      {
+        "from": 15,
+        "to": 12,
+        "label": "Causing"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC009.trn",
+    "time_mark_ut1": "275.05 276.70",
+    "time_mark_ut2": "276.22 276.82",
+    "ut1_text": ".. (H) what about ... [this one].",
+    "ut1_index": 158,
+    "ut2_text": " [o=n this o]ne.",
+    "ut2_index": 159,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 158,
+        "to": 158,
+        "label": "OpenQuestion"
+      },
+      {
+        "from": 159,
+        "to": 158,
+        "label": "CollaborativeCompletion, Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC009.trn",
+    "time_mark_ut1": "426.86 427.66",
+    "time_mark_ut2": "427.46 428.01",
+    "ut1_text": "Cause if it's no[=t],",
+    "ut1_index": 246,
+    "ut2_text": " [Yeah]",
+    "ut2_index": 247,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 246,
+        "to": 245,
+        "label": "Conditioning, Incomplete"
+      },
+      {
+        "from": 247,
+        "to": 246,
+        "label": "Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC009.trn",
+    "time_mark_ut1": "706.35 707.70",
+    "time_mark_ut2": "707.45 708.45",
+    "ut1_text": "that one's less than or equal [to] --",
+    "ut1_index": 372,
+    "ut2_text": " [like] two=,",
+    "ut2_index": 373,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 372,
+        "to": 369,
+        "label": "After"
+      },
+      {
+        "from": 373,
+        "to": 372,
+        "label": "Acknowledge, Incomplete"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC009.trn",
+    "time_mark_ut1": "854.87 855.87",
+    "time_mark_ut2": "855.49 857.79",
+    "ut1_text": "then at first [you bring],",
+    "ut1_index": 444,
+    "ut2_text": " [(THROAT) So] I only did one part of it [2in other words2].",
+    "ut2_index": 445,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 444,
+        "to": 443,
+        "label": "ConditionedBy"
+      },
+      {
+        "from": 445,
+        "to": 444,
+        "label": "Accept, Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC009.trn",
+    "time_mark_ut1": "896.60 899.35",
+    "time_mark_ut2": "898.80 899.35",
+    "ut1_text": "... I mean I'm sure you probably can do it that [way=].",
+    "ut1_index": 467,
+    "ut2_text": "[I don't know=],",
+    "ut2_index": 468,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 467,
+        "to": 467,
+        "label": "Statement, Propose"
+      },
+      {
+        "from": 468,
+        "to": 467,
+        "label": "Answer"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC009.trn",
+    "time_mark_ut1": "1076.80 1078.67",
+    "time_mark_ut2": "1078.52 1081.47",
+    "ut1_text": "and it's gonna be the same ... denominat[or].",
+    "ut1_index": 552,
+    "ut2_text": "[Well] what's the common denominator of bluh bluh bluh bluh [2bluh bluh bluh=.",
+    "ut2_index": 553,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 552,
+        "to": 551,
+        "label": "Conjunction"
+      },
+      {
+        "from": 553,
+        "to": 553,
+        "label": "RhetoricalQuestion"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC009.trn",
+    "time_mark_ut1": "1474.41 1475.61",
+    "time_mark_ut2": "1475.36 1476.01",
+    "ut1_text": "that I go to every [night].",
+    "ut1_index": 709,
+    "ut2_text": " [I] don't know.",
+    "ut2_index": 710,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 709,
+        "to": 707,
+        "label": "Expanding"
+      },
+      {
+        "from": 710,
+        "to": 709,
+        "label": "Answer"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC015.trn",
+    "time_mark_ut1": "20.317 21.364, 21.364 21.807",
+    "time_mark_ut2": "21.000 22.301",
+    "ut1_text": "[I'd like to] go al[2so, but2],",
+    "ut1_index": 18,
+    "ut2_text": "[2It's an interesting2] thing.",
+    "ut2_index": 19,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 18,
+        "to": 16,
+        "label": "Acknowledge, Accept"
+      },
+      {
+        "from": 19,
+        "to": 18,
+        "label": "Evaluating, Acknowledge"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC015.trn",
+    "time_mark_ut1": "72.291 73.787",
+    "time_mark_ut2": "73.445 74.611",
+    "ut1_text": "... (H) For a few [years],",
+    "ut1_index": 88,
+    "ut2_text": " [how long] [2has it been illegal2].",
+    "ut2_index": 89,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 88,
+        "to": 88,
+        "label": "Statement, Incomplete"
+      },
+      {
+        "from": 89,
+        "to": 89,
+        "label": "QuestionInfoRequest"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC015.trn",
+    "time_mark_ut1": "239.490 240.500, 240.500 241.635       ",
+    "time_mark_ut2": "239.690 240.320, 240.320 241.310",
+    "ut1_text": ".. of [like um, election] posters,",
+    "ut1_index": 295,
+    "ut2_text": "[posters, and demos].",
+    "ut2_index": 296,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 295,
+        "to": 294,
+        "label": "GivingDetails, Instantiating"
+      },
+      {
+        "from": 296,
+        "to": 294,
+        "label": "GivingDetails, Instantiating"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC015.trn",
+    "time_mark_ut1": "351.805 353.145, 353.145 354.435",
+    "time_mark_ut2": "352.390 353.835, 353.835 354.435",
+    "ut1_text": ".. (H) a[=nd the church, and that kind of thing is],",
+    "ut1_index": 419,
+    "ut2_text": " [and that's like the main street, %= you know].",
+    "ut2_index": 420,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 419,
+        "to": 418,
+        "label": "Conjunction"
+      },
+      {
+        "from": 420,
+        "to": 418,
+        "label": "Evaluating, Conjunction"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC015.trn",
+    "time_mark_ut1": "425.140 426.575",
+    "time_mark_ut2": "426.185 427.440",
+    "ut1_text": "almost deadly diseas[2es2],",
+    "ut1_index": 520,
+    "ut2_text": " [2And you2] both eat the same things?",
+    "ut2_index": 521,
+    "overlap_type": "transitional",
+    "dda_edge": [
+      {
+        "from": 520,
+        "to": 519,
+        "label": "Expanding"
+      },
+      {
+        "from": 521,
+        "to": 520,
+        "label": "Acknowledge, Expanding"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC015.trn",
+    "time_mark_ut1": "442.455 443.025",
+    "time_mark_ut2": "442.590 443.880",
+    "ut1_text": "and [and].",
+    "ut1_index": 544,
+    "ut2_text": "[I eat most] everything that you do.",
+    "ut2_index": 545,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 544,
+        "to": 543,
+        "label": "Conjunction, Incomplete"
+      },
+      {
+        "from": 545,
+        "to": 537,
+        "label": "Acknowledge, Similarity"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC015.trn",
+    "time_mark_ut1": "543.020 543.820",
+    "time_mark_ut2": "543.370 545.140",
+    "ut1_text": "then] it [2uh2] --",
+    "ut1_index": 707,
+    "ut2_text": "[2I think2] [3it's just <X full of all this X> quack stuff3].",
+    "ut2_index": 708,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 707,
+        "to": 705,
+        "label": "After, Incomplete"
+      },
+      {
+        "from": 708,
+        "to": 702,
+        "label": "Evaluating"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC015.trn",
+    "time_mark_ut1": "546.675 547.920",
+    "time_mark_ut2": "547.520 547.915 ",
+    "ut1_text": "[5A5] F Beta [6Food6]?",
+    "ut1_index": 715,
+    "ut2_text": "[6Liver6].",
+    "ut2_index": 716,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 715,
+        "to": 714,
+        "label": "CollaborativeCompletion, Joke"
+      },
+      {
+        "from": 716,
+        "to": 715,
+        "label": "Answer"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC015.trn",
+    "time_mark_ut1": "1383.240 1384.205, 1384.445 1384.785",
+    "time_mark_ut2": "1384.110 1384.840",
+    "ut1_text": "is no=t .. [as uh, (H)]",
+    "ut1_index": 1798,
+    "ut2_text": " [(H) I remember once],",
+    "ut2_index": 1799,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 1798,
+        "to": 1794,
+        "label": "Evaluating, Incomplete"
+      },
+      {
+        "from": 1799,
+        "to": 1799,
+        "label": "Statement, Incomplete"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC015.trn",
+    "time_mark_ut1": "1434.445 1435.435, 1435.365 1436.230",
+    "time_mark_ut2": "1434.860 1435.135, 1435.135 1436.350",
+    "ut1_text": "They're like [2um, .. (TSK) (H) They're like m-2] --",
+    "ut1_index": 1863,
+    "ut2_text": "[2Yeah, I remember what they look2] like.",
+    "ut2_index": 1864,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 1863,
+        "to": 1862,
+        "label": "GivingDetails, Incomplete"
+      },
+      {
+        "from": 1864,
+        "to": 1862,
+        "label": "Acknowledge, GivingDetails, Incomplete"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC044.trn",
+    "time_mark_ut1": "504.303 505.663",
+    "time_mark_ut2": "504.734 505.413 ",
+    "ut1_text": ".. [go to a gas] station.",
+    "ut1_index": 410,
+    "ut2_text": "[So he said he'll] --",
+    "ut2_index": 411,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 410,
+        "to": 409,
+        "label": "MotivatedBy"
+      },
+      {
+        "from": 411,
+        "to": 411,
+        "label": "Statement, Incomplete"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC044.trn",
+    "time_mark_ut1": "894.915 896.373",
+    "time_mark_ut2": "895.486 896.373",
+    "ut1_text": ". [See th- yeah].",
+    "ut1_index": 744,
+    "ut2_text": "[That type of thing].",
+    "ut2_index": 745,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 744,
+        "to": 743,
+        "label": "Acknowledge"
+      },
+      {
+        "from": 745,
+        "to": 743,
+        "label": "TakeStock"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC022.trn",
+    "time_mark_ut1": "168.535 170.227, 170.227 170.841",
+    "time_mark_ut2": "169.259 170.227, 170.227 170.589",
+    "ut1_text": "... just ... [challenging myself. (H)] Um,",
+    "ut1_index": 147,
+    "ut2_text": "[And that's okay. (H)]",
+    "ut2_index": 148,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 147,
+        "to": 144,
+        "label": "Conjunction"
+      },
+      {
+        "from": 148,
+        "to": 145,
+        "label": "Acknowledge, Accept"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC022.trn",
+    "time_mark_ut1": "295.440 295.764",
+    "time_mark_ut2": "295.484 296.798",
+    "ut1_text": "... [Yeah].",
+    "ut1_index": 263,
+    "ut2_text": "[or just] move on to something else.",
+    "ut2_index": 264,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 263,
+        "to": 262,
+        "label": "Answer"
+      },
+      {
+        "from": 264,
+        "to": 262,
+        "label": "Disjunction"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC022.trn",
+    "time_mark_ut1": "328.491 328.993",
+    "time_mark_ut2": "328.491 329.343",
+    "ut1_text": "... [you know],",
+    "ut1_index": 292,
+    "ut2_text": "[At that] point.",
+    "ut2_index": 293,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 292,
+        "to": 292,
+        "label": "SelfTalk"
+      },
+      {
+        "from": 293,
+        "to": 290,
+        "label": "Causing, Incomplete"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC022.trn",
+    "time_mark_ut1": "330.511 330.768",
+    "time_mark_ut2": "330.511 331.516",
+    "ut1_text": "[2He's2] --",
+    "ut1_index": 297,
+    "ut2_text": "[2and he's2] probably sitting [3there3],",
+    "ut2_index": 298,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 297,
+        "to": 297,
+        "label": "Incomplete"
+      },
+      {
+        "from": 298,
+        "to": 295,
+        "label": "Conjunction"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC022.trn",
+    "time_mark_ut1": "402.556 403.583",
+    "time_mark_ut2": "402.929 403.583",
+    "ut1_text": "... four-[hundreds],",
+    "ut1_index": 349,
+    "ut2_text": "[Four-hundreds],",
+    "ut2_index": 350,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 349,
+        "to": 348,
+        "label": "Expanding"
+      },
+      {
+        "from": 350,
+        "to": 349,
+        "label": "Acknowledge, Restatement"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC022.trn",
+    "time_mark_ut1": "582.350 582.745",
+    "time_mark_ut2": "582.350 584.315",
+    "ut1_text": "... [That way].",
+    "ut1_index": 506,
+    "ut2_text": " [Because you] don't have to sequence em at some other point,",
+    "ut2_index": 507,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 506,
+        "to": 505,
+        "label": "Instantiating"
+      },
+      {
+        "from": 507,
+        "to": 505,
+        "label": "CollaborativeCompletion"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC022.trn",
+    "time_mark_ut1": "612.895 613.160",
+    "time_mark_ut2": "613.115 613.825",
+    "ut1_text": "... I'm [glad].",
+    "ut1_index": 530,
+    "ut2_text": "[See there] was,",
+    "ut2_index": 531,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 530,
+        "to": 527,
+        "label": "Evaluating"
+      },
+      {
+        "from": 531,
+        "to": 527,
+        "label": "Contrast, Incomplete"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC022.trn",
+    "time_mark_ut1": "638.345 639.765 ",
+    "time_mark_ut2": "638.345 638.560, 638.560 638.930",
+    "ut1_text": "[2He was at a five2]-hundred climb and,",
+    "ut1_index": 555,
+    "ut2_text": "[2Or, he was a-2] --",
+    "ut2_index": 556,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 555,
+        "to": 554,
+        "label": "GivingDetails"
+      },
+      {
+        "from": 556,
+        "to": 554,
+        "label": "Disjunction, Incomplete"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC022.trn",
+    "time_mark_ut1": "684.470 686.540",
+    "time_mark_ut2": "684.920 685.485",
+    "ut1_text": ".. (H) Jet Speed [is th- I know fast on the] pr- departure,",
+    "ut1_index": 594,
+    "ut2_text": "[AM-Flight].",
+    "ut2_index": 595,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 594,
+        "to": 594,
+        "label": "Statement"
+      },
+      {
+        "from": 595,
+        "to": 593,
+        "label": "Instantiating, GivingDetails, SelfTalk"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC051.trn",
+    "time_mark_ut1": "16.322 17.548",
+    "time_mark_ut2": "16.438 17.288",
+    "ut1_text": "wal[k around a lo]=t,",
+    "ut1_index": 19,
+    "ut2_text": "[Walk everywhere],",
+    "ut2_index": 20,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 19,
+        "to": 16,
+        "label": "Expanding"
+      },
+      {
+        "from": 20,
+        "to": 16,
+        "label": "CollaborativeCompletion"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC051.trn",
+    "time_mark_ut1": "71.887 72.852",
+    "time_mark_ut2": "72.164 72.567",
+    "ut1_text": "by6] [7this7] p- t- --",
+    "ut1_index": 84,
+    "ut2_text": "[7Modern7].",
+    "ut2_index": 85,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 84,
+        "to": 84,
+        "label": "Incomplete"
+      },
+      {
+        "from": 85,
+        "to": 82,
+        "label": "Evaluating"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC051.trn",
+    "time_mark_ut1": "115.453 118.124",
+    "time_mark_ut2": "116.960 118.038",
+    "ut1_text": "(H) and it's right there by this .. [most sacred] [2site2].",
+    "ut1_index": 130,
+    "ut2_text": "[Did you go to that meeting] [2~Sean2]?",
+    "ut2_index": 131,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 130,
+        "to": 129,
+        "label": "Conjunction"
+      },
+      {
+        "from": 131,
+        "to": 131,
+        "label": "OpenQuestion"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC051.trn",
+    "time_mark_ut1": "132.338 132.663        ",
+    "time_mark_ut2": "132.584 133.180",
+    "ut1_text": "We we[re] X> --",
+    "ut1_index": 154,
+    "ut2_text": "[Well] no.",
+    "ut2_index": 155,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 154,
+        "to": 154,
+        "label": "Incomplete"
+      },
+      {
+        "from": 155,
+        "to": 152,
+        "label": "Reject"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC051.trn",
+    "time_mark_ut1": "160.707 161.635",
+    "time_mark_ut2": "161.203 162.542",
+    "ut1_text": "... Some[times].",
+    "ut1_index": 184,
+    "ut2_text": "[They are] in New York now.",
+    "ut2_index": 185,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 184,
+        "to": 182,
+        "label": "Answer"
+      },
+      {
+        "from": 185,
+        "to": 185,
+        "label": "Statement"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC051.trn",
+    "time_mark_ut1": "173.945 175.667",
+    "time_mark_ut2": "174.664 175.667",
+    "ut1_text": "... Went to [different meeting]s.",
+    "ut1_index": 203,
+    "ut2_text": "[disappeared].",
+    "ut2_index": 204,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 203,
+        "to": 202,
+        "label": "CollaborativeCompletion"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC051.trn",
+    "time_mark_ut1": "180.096 180.714",
+    "time_mark_ut2": "180.225 180.704",
+    "ut1_text": "and [2there's a2] --",
+    "ut1_index": 210,
+    "ut2_text": "[2Signing2].",
+    "ut2_index": 211,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 210,
+        "to": 209,
+        "label": "Conjunction"
+      },
+      {
+        "from": 211,
+        "to": 209,
+        "label": "CollaborativeCompletion"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC051.trn",
+    "time_mark_ut1": "255.360 255.892",
+    "time_mark_ut2": "255.461 256.363",
+    "ut1_text": "Fif[ties]?",
+    "ut1_index": 303,
+    "ut2_text": "[Nineteen]-ten?",
+    "ut2_index": 304,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 303,
+        "to": 302,
+        "label": "Answer"
+      },
+      {
+        "from": 304,
+        "to": 304,
+        "label": "OpenQuestion"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC051.trn",
+    "time_mark_ut1": "289.694 290.474",
+    "time_mark_ut2": "290.098 291.131",
+    "ut1_text": " ... In [New York].",
+    "ut1_index": 345,
+    "ut2_text": "[But cer]tain areas,",
+    "ut2_index": 346,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 345,
+        "to": 344,
+        "label": "CollaborativeCompletion, GivingDetails, Instantiating"
+      },
+      {
+        "from": 346,
+        "to": 344,
+        "label": "Contrast"
+      }
+    ]
+  },
+  {
+    "transcript_name": "SBC051.trn",
+    "time_mark_ut1": "362.292 364.242",
+    "time_mark_ut2": "363.684 364.347",
+    "ut1_text": "... [uh=],",
+    "ut1_index": 414,
+    "ut2_text": "[Restric]tions.",
+    "ut2_index": 415,
+    "overlap_type": "progressional",
+    "dda_edge": [
+      {
+        "from": 414,
+        "to": 414,
+        "label": "SelfTalk"
+      },
+      {
+        "from": 415,
+        "to": 413,
         "label": "CollaborativeCompletion"
       }
     ]
