@@ -1,0 +1,21 @@
+Using device: cuda
+
+
+
+/projects/lude4390/software/anaconda/envs/SpokenEnglish/lib/python3.10/site-packages/torch/nn/modules/transformer.py:382: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+Epoch 1: Train Loss: 1.5966 | Val Loss: 1.5721 | Val F1: 0.096
+Epoch 2: Train Loss: 1.5631 | Val Loss: 1.5422 | Val F1: 0.096
+Epoch 3: Train Loss: 1.5354 | Val Loss: 1.5213 | Val F1: 0.096
+Epoch 4: Train Loss: 1.5184 | Val Loss: 1.5047 | Val F1: 0.096
+Epoch 5: Train Loss: 1.5079 | Val Loss: 1.4977 | Val F1: 0.096
+Epoch 6: Train Loss: 1.4990 | Val Loss: 1.4912 | Val F1: 0.096
+Epoch 7: Train Loss: 1.4864 | Val Loss: 1.4849 | Val F1: 0.100
+Epoch 8: Train Loss: 1.4867 | Val Loss: 1.4794 | Val F1: 0.100
+Epoch 9: Train Loss: 1.4808 | Val Loss: 1.4744 | Val F1: 0.176
+Epoch 10: Train Loss: 1.4734 | Val Loss: 1.4699 | Val F1: 0.100
+Epoch 11: Train Loss: 1.4687 | Val Loss: 1.4651 | Val F1: 0.100
+Epoch 12: Train Loss: 1.4666 | Val Loss: 1.4608 | Val F1: 0.100
+Epoch 13: Train Loss: 1.4620 | Val Loss: 1.4588 | Val F1: 0.100
+Epoch 14: Train Loss: 1.4603 | Val Loss: 1.4569 | Val F1: 0.100
+Epoch 15: Train Loss: 1.4585 | Val Loss: 1.4551 | Val F1: 0.100

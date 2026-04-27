@@ -1,3 +1,5 @@
+import math
+
 import numpy as np
 import torch
 import torch.nn as nn
@@ -40,21 +42,25 @@ def main():
     labels_tensor = torch.tensor(labels_raw, dtype=torch.long)
 
     indices = range(len(labels_tensor))
-    train_idx, test_idx = train_test_split(indices, test_size=0.2, random_state=42)
-
-    train_dataset = TensorDataset(
-        input_ids_tensor[train_idx],
-        segment_ids_tensor[train_idx],
-        labels_tensor[train_idx]
-    )
-    val_dataset = TensorDataset(
-        input_ids_tensor[test_idx],
-        segment_ids_tensor[test_idx],
-        labels_tensor[test_idx]
+    train_idx, dev_idx = train_test_split(
+        np.arange(len(input_ids_tensor)),
+        test_size=0.1,
+        random_state=42,
+        stratify=labels_raw  # Ensure classes are balanced
     )
 
-    train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size=32, shuffle=False)
+    train_loader = DataLoader(
+        TensorDataset(input_ids_tensor[train_idx], segment_ids_tensor[train_idx], labels_tensor[train_idx]),
+        batch_size=32, shuffle=True)
+    dev_loader = DataLoader(
+        TensorDataset(
+            input_ids_tensor[dev_idx],
+            segment_ids_tensor[dev_idx],
+            labels_tensor[dev_idx]
+        ),
+        batch_size=32,
+        shuffle=False
+    )
 
     actual_vocab_size = custom_tokenizer.tokenizer.get_vocab_size()
 
@@ -64,15 +70,19 @@ def main():
 
     class_counts = np.bincount(labels_raw, minlength=5)
 
-    weights = len(labels_raw) / (len(class_counts) * class_counts)
+    safe_counts = np.where(class_counts > 0, class_counts, 1)
+    weights = len(labels_raw) / (len(class_counts) * safe_counts)
+
+    weights[class_counts == 0] = 0.0
+
     weights_tensor = torch.tensor(weights, dtype=torch.float32).to(device)
 
     criterion = nn.CrossEntropyLoss(weight=weights_tensor)
 
     lr = 2e-5
-    optimizer = torch.optim.Adam(model_discorese.parameters(), lr=lr)
-
-    for epoch in range(10):
+    optimizer = torch.optim.AdamW(model_discorese.parameters(), lr=lr)
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', factor=0.5, patience=2)
+    for epoch in range(15):
         model_discorese.train()
         total_train_loss = 0
         for b_input_ids, b_segment_ids, b_target in train_loader:
@@ -85,25 +95,37 @@ def main():
             optimizer.step()
             total_train_loss += loss.item()
 
-        print(f"Epoch: {epoch + 1} | Train Loss: {total_train_loss / len(train_loader):.4f}")
-
-        # Validation
+        # --- VALIDATION PHASE ---
         model_discorese.eval()
+        best_dev_f1 = 0
+        val_loss = 0
         all_true, all_pred = [], []
+
         with torch.no_grad():
-            for b_input_ids, b_segment_ids, b_target in val_loader:
-                b_input_ids, b_segment_ids, b_target = b_input_ids.to(device), b_segment_ids.to(device), b_target.to(device)
+            for b_input_ids, b_segment_ids, b_target in dev_loader:
+                b_input_ids, b_segment_ids, b_target = b_input_ids.to(device), b_segment_ids.to(device), b_target.to(
+                    device)
+
                 outputs = model_discorese(b_input_ids, b_segment_ids)
+                loss = criterion(outputs, b_target)
+                val_loss += loss.item()
+
                 _, preds = torch.max(outputs, 1)
                 all_true.extend(b_target.cpu().numpy())
                 all_pred.extend(preds.cpu().numpy())
 
-        if len(all_true) > 0:
-            val_acc = accuracy_score(all_true, all_pred)
-            val_f1 = f1_score(all_true, all_pred, average="macro")
-            print(f"VALIDATION: acc={val_acc:.3f}, f1={val_f1:.3f}")
+        avg_train_loss = total_train_loss / len(train_loader)
+        avg_val_loss = val_loss / len(dev_loader)
+        val_f1 = f1_score(all_true, all_pred, average="macro")
 
-    torch.save(model_discorese.state_dict(), "multi_ling_emotion.pth")
+        print(
+            f"Epoch {epoch + 1}: Train Loss: {avg_train_loss:.4f} | Val Loss: {avg_val_loss:.4f} | Val F1: {val_f1:.3f}")
+
+        if val_f1 > best_dev_f1:
+            best_dev_f1 = val_f1
+            torch.save(model_discorese.state_dict(), "best_model.pt")
+        scheduler.step(val_f1)
+
     return 0
 
 if __name__ == "__main__":

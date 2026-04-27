@@ -18,11 +18,7 @@ class WeightedTrainer(Trainer):
     def __init__(self, *args, dataset=None, **kwargs):
         super().__init__(*args, **kwargs)
 
-        if dataset is None:
-            raise ValueError("WeightedTrainer requires a 'dataset' argument to calculate weights.")
-
         y_train = [example['overlap_type'] for example in dataset['train']]
-        full_class_names = ['recognitional', 'other', 'transitional', 'progressional', 'restatement']
 
         present_classes = np.unique(y_train)
 
@@ -33,24 +29,22 @@ class WeightedTrainer(Trainer):
         )
 
         weight_dict = {cls: weight for cls, weight in zip(present_classes, calculated_weights)}
-        final_weights = [weight_dict.get(cls, 1.0) for cls in full_class_names]
 
-        self.weights_tensor = torch.tensor(final_weights, dtype=torch.float32)
-        alpha = [weight_dict.get(cls, 1.0) for cls in full_class_names]
+        # Map weights to the internal IDs the model uses (from model.label2id)
+        final_weights = [weight_dict.get(self.model.config.id2label[i], 1.0)
+                         for i in range(self.model.config.num_labels)]
 
-        self.focal_loss_fct = FocalLoss(
-            alpha=torch.tensor(alpha, dtype=torch.float32),
-            gamma=2.0
-        )
+        self.weights_tensor = torch.tensor(final_weights, dtype=torch.float32).to(self.model.device)
 
-        print(f"Calculated class weights: {dict(zip(full_class_names, final_weights))}")
+        self.focal_loss_fct = FocalLoss(alpha=self.weights_tensor, gamma=2.0)
 
     def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
         labels = inputs.get("labels")
         outputs = model(**inputs)
         logits = outputs.get("logits")
 
-        self.focal_loss_fct.alpha = self.focal_loss_fct.alpha.to(logits.device)
+        if self.focal_loss_fct.alpha is not None:
+            self.focal_loss_fct.alpha = self.focal_loss_fct.alpha.to(logits.device)
 
         loss = self.focal_loss_fct(
             logits.view(-1, self.model.config.num_labels),
@@ -60,8 +54,19 @@ class WeightedTrainer(Trainer):
         return (loss, outputs) if return_outputs else loss
 
 class LoggingCallback(TrainerCallback):
+    def __init__(self):
+        self.last_train_loss = None
     def on_log(self, args, state, control, logs=None, **kwargs):
         if logs is not None:
+            if "loss" in logs:
+                self.last_train_loss = logs["loss"]
+            if "eval_loss" in logs:
+                epoch = logs.get("epoch")
+                train_loss = f"{self.last_train_loss:.4f}" if self.last_train_loss is not None else "N/A"
+                val_loss = logs["eval_loss"]
+                val_f1 = logs.get("eval_f1",0.0)
+
+                print(f"Epoch {epoch:.0f} | Train Loss: {train_loss} | Val Loss: {val_loss:.4f} | Val F1: {val_f1:.4f}")
             log_filepath = os.path.join(args.output_dir, "experiment_metrics.log")
             with open(log_filepath, "a") as f:
                 f.write(str(logs) + "\n")
@@ -98,7 +103,7 @@ def main():
 
     dataset = load_dataset('json', data_files={'train': "../../data/FINAL_DATA_TO_RUN/data_without_edges.json"})
 
-    split_dataset = dataset["train"].train_test_split(test_size=0.2)
+    split_dataset = dataset["train"].train_test_split(test_size=0.1)
 
     tokenized_dataset = split_dataset.map(
         lambda x: overlap_tokenizer.tokenize_function(x, model.label2id),
@@ -108,24 +113,20 @@ def main():
     # In main.py
     training_args = TrainingArguments(
         output_dir="./overlap_output",
-        num_train_epochs=50,
+        num_train_epochs=12,
         per_device_train_batch_size=8,
         eval_strategy="epoch",
         save_strategy="epoch",
         logging_steps=5,
-        learning_rate=3e-5,
+        learning_rate=2e-5,
         lr_scheduler_type="linear",
-        warmup_ratio=0.15,
+        warmup_ratio=0.1,
         weight_decay=0.01,
-        max_grad_norm=1.0,
         load_best_model_at_end=True,
         metric_for_best_model="f1",
-        bf16=False,
-        fp16=False,
+        label_smoothing_factor=0.0,
+        fp16=True,
         report_to="none",
-        warmup_steps=5,
-        label_smoothing_factor=0.1,
-        gradient_accumulation_steps=1,
     )
 
     os.makedirs("./overlap_output", exist_ok=True)
