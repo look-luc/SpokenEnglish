@@ -54,8 +54,19 @@ class WeightedTrainer(Trainer):
         return (loss, outputs) if return_outputs else loss
 
 class LoggingCallback(TrainerCallback):
+    def __init__(self):
+        self.last_train_loss = None
     def on_log(self, args, state, control, logs=None, **kwargs):
         if logs is not None:
+            if "loss" in logs:
+                self.last_train_loss = logs["loss"]
+            if "eval_loss" in logs:
+                epoch = logs.get("epoch")
+                train_loss = f"{self.last_train_loss:.4f}" if self.last_train_loss is not None else "N/A"
+                val_loss = logs["eval_loss"]
+                val_f1 = logs.get("eval_f1",0.0)
+
+                print(f"Epoch {epoch:.0f} | Train Loss: {train_loss} | Val Loss: {val_loss:.4f} | Val F1: {val_f1:.4f}")
             log_filepath = os.path.join(args.output_dir, "experiment_metrics.log")
             with open(log_filepath, "a") as f:
                 f.write(str(logs) + "\n")
