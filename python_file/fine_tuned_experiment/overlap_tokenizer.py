@@ -3,15 +3,15 @@ from transformers import AutoTokenizer
 import re
 
 OVERLAP_MAP = {
-    r'\(\(.*?\)\)': "<NOISE>",
-    r'\(H\)=?': "<BREATH>",
-    r'\(.*?\)': "<SOUND>",
-    r"\[\d+?": "<SOV>",
-    r"\d+?\]": "<EOV>",
-    r"\[": "<SOV>",
-    r"\]": "<EOV>",
-    r"\.\.": "<PAUSE>",
-    r"--": "<TRUNC>",
+    r'\(\(.*?\)\)': "{NOISE}",
+    r'\(H\)=?': "{BREATH}",
+    r'\(.*?\)': "{SOUND}",
+    r"\[\d+": "{SOV}",
+    r"\d+\]": "{EOV}",
+    r"\.\.": "{PAUSE}",
+    r"--": "{TRUNC}",
+    r'\<': "{START_OTHER}",
+    r'\>': "{END_OTHER}",
 }
 
 class tokenizer():

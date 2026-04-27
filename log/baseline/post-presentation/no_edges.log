@@ -4,18 +4,18 @@ Using device: cuda
 
 /projects/lude4390/software/anaconda/envs/SpokenEnglish/lib/python3.10/site-packages/torch/nn/modules/transformer.py:382: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
   warnings.warn(
-Epoch 1: Train Loss: 1.6015 | Val Loss: 1.5814 | Val F1: 0.083
-Epoch 2: Train Loss: 1.5706 | Val Loss: 1.5532 | Val F1: 0.096
-Epoch 3: Train Loss: 1.5449 | Val Loss: 1.5338 | Val F1: 0.096
-Epoch 4: Train Loss: 1.5274 | Val Loss: 1.5171 | Val F1: 0.096
-Epoch 5: Train Loss: 1.5141 | Val Loss: 1.5028 | Val F1: 0.096
-Epoch 6: Train Loss: 1.5030 | Val Loss: 1.4968 | Val F1: 0.096
-Epoch 7: Train Loss: 1.4964 | Val Loss: 1.4913 | Val F1: 0.096
-Epoch 8: Train Loss: 1.4914 | Val Loss: 1.4866 | Val F1: 0.096
-Epoch 9: Train Loss: 1.4847 | Val Loss: 1.4844 | Val F1: 0.096
-Epoch 10: Train Loss: 1.4853 | Val Loss: 1.4821 | Val F1: 0.096
-Epoch 11: Train Loss: 1.4804 | Val Loss: 1.4802 | Val F1: 0.096
-Epoch 12: Train Loss: 1.4835 | Val Loss: 1.4793 | Val F1: 0.096
-Epoch 13: Train Loss: 1.4813 | Val Loss: 1.4783 | Val F1: 0.096
-Epoch 14: Train Loss: 1.4800 | Val Loss: 1.4773 | Val F1: 0.096
-Epoch 15: Train Loss: 1.4740 | Val Loss: 1.4769 | Val F1: 0.096
+Epoch 1: Train Loss: 1.5913 | Val Loss: 1.5593 | Val F1: 0.111
+Epoch 2: Train Loss: 1.5599 | Val Loss: 1.5339 | Val F1: 0.111
+Epoch 3: Train Loss: 1.5329 | Val Loss: 1.5163 | Val F1: 0.111
+Epoch 4: Train Loss: 1.5166 | Val Loss: 1.5042 | Val F1: 0.111
+Epoch 5: Train Loss: 1.5105 | Val Loss: 1.4987 | Val F1: 0.111
+Epoch 6: Train Loss: 1.5029 | Val Loss: 1.4935 | Val F1: 0.111
+Epoch 7: Train Loss: 1.4912 | Val Loss: 1.4882 | Val F1: 0.111
+Epoch 8: Train Loss: 1.4873 | Val Loss: 1.4858 | Val F1: 0.111
+Epoch 9: Train Loss: 1.4829 | Val Loss: 1.4834 | Val F1: 0.111
+Epoch 10: Train Loss: 1.4802 | Val Loss: 1.4811 | Val F1: 0.111
+Epoch 11: Train Loss: 1.4747 | Val Loss: 1.4799 | Val F1: 0.111
+Epoch 12: Train Loss: 1.4764 | Val Loss: 1.4787 | Val F1: 0.111
+Epoch 13: Train Loss: 1.4800 | Val Loss: 1.4776 | Val F1: 0.111
+Epoch 14: Train Loss: 1.4788 | Val Loss: 1.4771 | Val F1: 0.111
+Epoch 15: Train Loss: 1.4785 | Val Loss: 1.4766 | Val F1: 0.111
