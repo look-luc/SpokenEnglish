@@ -15,7 +15,7 @@ def main():
         "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
     print(f"Using device: {device}")
 
-    data = pd.read_json("../../data/FINAL_DATA_TO_RUN/data_without_edges.json")
+    data = pd.read_json("../../data/FINAL_DATA_TO_RUN/data_with_edges.json")
 
     label_map = {
         'recognitional': 0,
@@ -127,7 +127,7 @@ def main():
         if val_f1 > best_dev_f1:
             best_dev_f1 = val_f1
             torch.save(model_discorese.state_dict(), "best_model.pt")
-        scheduler.step(val_f1)
+        scheduler.step(best_dev_f1)
     return 0
 
 if __name__ == "__main__":
