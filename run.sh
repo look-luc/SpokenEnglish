@@ -24,7 +24,7 @@ module load anaconda
 
 set +u && conda activate SpokenEnglish && set -u
 
-cd "$REPO_ROOT/SpokenEnglish/python_file/baseline"
+cd "$REPO_ROOT/SpokenEnglish/python_file/fine_tuned_experiment"
 
 export PYTHONUNBUFFERED=1
 

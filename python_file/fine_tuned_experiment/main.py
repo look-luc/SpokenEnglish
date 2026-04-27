@@ -101,7 +101,7 @@ def main():
 
     model.resize_embeddings(len(overlap_tokenizer.tokenizer))
 
-    dataset = load_dataset('json', data_files={'train': "../../data/FINAL_DATA_TO_RUN/data_with_edges.json"})
+    dataset = load_dataset('json', data_files={'train': "../../data/FINAL_DATA_TO_RUN/data_without_edges.json"})
 
     split_dataset = dataset["train"].train_test_split(test_size=0.1)
 
